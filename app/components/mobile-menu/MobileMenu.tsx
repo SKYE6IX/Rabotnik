@@ -1,0 +1,57 @@
+import React, { useRef, useState } from "react";
+import { NavLink } from "react-router";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import Button from "../button/Button";
+import "./mobile-menu.css";
+
+gsap.registerPlugin(useGSAP);
+
+interface NavigationsList {
+   name: string;
+   href: string;
+}
+
+type MobileMenuProp = {
+   navList: NavigationsList[];
+   isActive: boolean;
+   addAnimation: (animation: GSAPTween) => void;
+};
+
+function MobileMenu({ navList, isActive, addAnimation }: MobileMenuProp) {
+   const menuRef = useRef<HTMLDivElement>(null);
+   const [initialRender, setInitialRender] = useState(true);
+
+   useGSAP(() => {
+      const animation = gsap
+         .fromTo(
+            menuRef.current,
+            { y: isActive ? 30 : 0, opacity: isActive ? 0 : 1 },
+            { y: !isActive ? 30 : 0, opacity: !isActive ? 0 : 1 }
+         )
+         .progress(initialRender ? 1 : 0, true);
+      addAnimation(animation);
+      setInitialRender(false);
+   }, [isActive]);
+
+   return (
+      <div
+         className={["mobile-menu", isActive ? "active" : ""].join(" ")}
+         ref={menuRef}
+      >
+         <nav className="mobile-menu__nav">
+            <ul className="mobile-menu__nav-container">
+               {navList.map((nav) => (
+                  <li key={nav.name} className="mobile-menu__nav-item">
+                     <NavLink to={nav.href}>{nav.name}</NavLink>
+                  </li>
+               ))}
+            </ul>
+         </nav>
+         <div className="mobile-menu__cta-button">
+            <Button />
+         </div>
+      </div>
+   );
+}
+export default MobileMenu;
