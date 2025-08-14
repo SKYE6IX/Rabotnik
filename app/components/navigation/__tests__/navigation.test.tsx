@@ -2,8 +2,6 @@ import { test, describe, vi, expect } from "vitest";
 import { createRoutesStub } from "react-router";
 import { render, screen } from "@testing-library/react";
 import Navigation from "../Navigation";
-import { useGSAP } from "@gsap/react";
-import { gsap } from "gsap";
 
 vi.mock("gsap");
 vi.mock("@gsap/react");

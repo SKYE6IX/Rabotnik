@@ -10,10 +10,10 @@ import "./navigation.css";
 gsap.registerPlugin(useGSAP);
 
 const navigationsList = [
-   { name: "Услуги", href: "#" },
-   { name: "Наша платформа", href: "#" },
-   { name: "О нас", href: "#" },
-   { name: "Блог", href: "#" },
+   { name: "Услуги", href: "/service" },
+   { name: "Наша платформа", href: "/platform" },
+   { name: "О нас", href: "about" },
+   { name: "Блог", href: "/blog" },
 ];
 
 function Navigation() {
@@ -81,7 +81,7 @@ function Navigation() {
                </ul>
             </nav>
             <div className="header__cta-button">
-               <Button />
+               <Button color="orange" label="Связаться" />
             </div>
             <button className="header__menu-bar" onClick={toggleMenu}>
                <svg

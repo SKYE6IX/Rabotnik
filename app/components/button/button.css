@@ -1,9 +1,17 @@
 .botton {
    border: none;
-   background-color: #f25900;
    padding: 10px 20px;
    border-radius: 20px;
    cursor: pointer;
+}
+.orange {
+   background-color: #f25900;
+}
+.purple {
+   background-color: #d8beff;
+}
+.black {
+   background-color: #000000;
 }
 .botton__link {
    width: 100%;
@@ -18,4 +26,18 @@
    line-height: 19.2px;
    font-weight: 400;
    color: rgba(255, 255, 255, 1);
+}
+.button__icon .button__icon-path-2,
+.button__icon .button__icon-path-1 {
+   transition: transform 0.3s ease-in;
+}
+.botton:hover {
+   .button__icon .button__icon-path-2 {
+      transform: scaleX(1.5);
+      transform-origin: left center;
+   }
+   .button__icon .button__icon-path-1 {
+      transform: translateX(9px);
+      transform-origin: left center;
+   }
 }

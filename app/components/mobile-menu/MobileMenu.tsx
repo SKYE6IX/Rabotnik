@@ -38,6 +38,9 @@ function MobileMenu({ navList, isActive, addAnimation }: MobileMenuProp) {
       <div
          className={["mobile-menu", isActive ? "active" : ""].join(" ")}
          ref={menuRef}
+         aria-hidden
+         aria-disabled={!isActive}
+         aria-haspopup="menu"
       >
          <nav className="mobile-menu__nav">
             <ul className="mobile-menu__nav-container">
@@ -49,7 +52,7 @@ function MobileMenu({ navList, isActive, addAnimation }: MobileMenuProp) {
             </ul>
          </nav>
          <div className="mobile-menu__cta-button">
-            <Button />
+            <Button color="orange" label="Связаться" />
          </div>
       </div>
    );
