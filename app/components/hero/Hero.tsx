@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useRef } from "react";
 import Button from "../button/Button";
+import { gsap } from "gsap";
+import { SplitText } from "gsap/SplitText";
+import { useGSAP } from "@gsap/react";
 import "./hero.css";
+
+gsap.registerPlugin(useGSAP, SplitText);
 
 interface HeroProps {
    image: string;
@@ -10,11 +15,54 @@ interface HeroProps {
 }
 
 function Hero({ image, showMetrics, subTitle, children }: HeroProps) {
+   const containerRef = useRef<HTMLDivElement>(null);
+   useGSAP(
+      () => {
+         const tl = gsap.timeline({
+            defaults: { duration: 1, ease: "power1.out", autoAlpha: 0 },
+         });
+         const split = SplitText.create(".hero__title", { type: "lines" });
+         tl.from(split.lines, {
+            yPercent: 40,
+            stagger: 0.2,
+         })
+            .from(
+               ".hero__sub-title",
+               {
+                  yPercent: 30,
+               },
+               ">-0.7"
+            )
+            .from(
+               ".hero__button_large",
+               {
+                  duration: 1.5,
+                  xPercent: -20,
+                  ease: "back.out(3)",
+               },
+               "<"
+            )
+            .from(
+               ".hero__metrics-item",
+               {
+                  yPercent: 20,
+                  stagger: 0.2,
+                  duration: 0.5,
+               },
+               ">-1.5"
+            );
+      },
+      { scope: containerRef }
+   );
    return (
-      <section className="hero">
+      <section className="hero" ref={containerRef}>
          <div className="hero__inner-wrapper">
             <div className="hero__image-wrapper">
-               <img src={image} alt="An Hero Image on display" />
+               <img
+                  src={image}
+                  alt="An Hero Image on display"
+                  data-testid="hero-image"
+               />
             </div>
             <div className="hero__shapes-wrapper">
                <div className="hero__title-wrapper">
@@ -34,7 +82,9 @@ function Hero({ image, showMetrics, subTitle, children }: HeroProps) {
                   </svg>
                </div>
                <div className="hero__sub-title-wrapper">
-                  <h3 className="hero__sub-title">{subTitle}</h3>
+                  <h3 className="hero__sub-title" data-testid="hero-sub-title">
+                     {subTitle}
+                  </h3>
                   <svg
                      width="30"
                      height="30"
@@ -91,19 +141,19 @@ function Hero({ image, showMetrics, subTitle, children }: HeroProps) {
                ].join(" ")}
             >
                <div className="hero__metrics-item">
-                  <h3 className="hero__metrics-text">
+                  <h3 className="hero__metrics-text" data-testid="hero-metric">
                      <span className="highlight">15 лет рынке</span>
                      <br /> кадровой рекламы
                   </h3>
                </div>
                <div className="hero__metrics-item">
-                  <h3 className="hero__metrics-text">
+                  <h3 className="hero__metrics-text" data-testid="hero-metric">
                      <span className="highlight">Сильная экспертиза</span> в
                      массовом подборе, включая вахтовый метод
                   </h3>
                </div>
                <div className="hero__metrics-item">
-                  <h3 className="hero__metrics-text">
+                  <h3 className="hero__metrics-text" data-testid="hero-metric">
                      Работаем с компаниями из разных отраслей
                      <span className="highlight"> по всей России</span>
                   </h3>

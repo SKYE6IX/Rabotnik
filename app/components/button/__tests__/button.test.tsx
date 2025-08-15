@@ -1,10 +1,10 @@
 import { MemoryRouter } from "react-router";
 import { render, screen } from "@testing-library/react";
-import { describe, expect, it } from "vitest";
+import { describe, expect, test } from "vitest";
 import Button from "../Button";
 
 describe("Button component", () => {
-   it("render the right label with the correct background-color", () => {
+   test("render the right label with the correct background-color", () => {
       // Arrange
       const mockLabel = "TestButton";
       render(
@@ -23,7 +23,7 @@ describe("Button component", () => {
       expect(buttonText).toHaveTextContent(mockLabel);
    });
 
-   it("render the arrow svg icon", () => {
+   test("render the arrow svg icon", () => {
       // Arrange
       const mockLabel = "TestButton";
       render(
