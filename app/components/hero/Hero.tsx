@@ -5,15 +5,12 @@ import { SplitText } from "gsap/SplitText";
 import { useGSAP } from "@gsap/react";
 import "./hero.css";
 
-gsap.registerPlugin(useGSAP, SplitText);
-
 interface HeroProps {
    image: string;
    showMetrics: boolean;
    subTitle: string;
    children: React.ReactNode;
 }
-
 function Hero({ image, showMetrics, subTitle, children }: HeroProps) {
    const containerRef = useRef<HTMLDivElement>(null);
    useGSAP(

@@ -8,7 +8,14 @@ import {
 } from "react-router";
 import type { Route } from "./+types/root";
 import Navigation from "./components/navigation/Navigation";
-import "./app.css";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { SplitText } from "gsap/SplitText";
+import "./global.css";
+
+// Global register gsap animation for all components and pages
+gsap.registerPlugin(useGSAP, ScrollTrigger, SplitText);
 
 export const links: Route.LinksFunction = () => [
    { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -22,7 +29,6 @@ export const links: Route.LinksFunction = () => [
       href: "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap",
    },
 ];
-
 export function Layout({ children }: { children: React.ReactNode }) {
    return (
       <html lang="ru">
@@ -68,7 +74,6 @@ export default function App() {
 //     details = error.message;
 //     stack = error.stack;
 //   }
-
 //   return (
 //     <main className="pt-16 p-4 container mx-auto">
 //       <h1>{message}</h1>

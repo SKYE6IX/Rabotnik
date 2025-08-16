@@ -5,8 +5,6 @@ import { useGSAP } from "@gsap/react";
 import Button from "../button/Button";
 import "./mobile-menu.css";
 
-gsap.registerPlugin(useGSAP);
-
 interface NavigationsList {
    name: string;
    href: string;

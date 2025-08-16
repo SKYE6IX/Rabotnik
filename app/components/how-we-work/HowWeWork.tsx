@@ -1,12 +1,9 @@
 import React, { useRef } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Button from "../button/Button";
 import image from "./how-we-work.jpg";
 import "./how-we-work.css";
-
-gsap.registerPlugin(ScrollTrigger);
 
 function HowWeWork() {
    const animateRef = useRef<HTMLDivElement>(null);

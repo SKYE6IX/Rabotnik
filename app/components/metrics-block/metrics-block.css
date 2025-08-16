@@ -1,0 +1,107 @@
+.metrics-block {
+   margin-top: 100px;
+   padding-bottom: 50px;
+   @media only screen and (max-width: 1024px) {
+      margin-top: 80px;
+   }
+   @media only screen and (min-width: 320px) and (max-width: 767px) {
+      margin-top: 40px;
+   }
+}
+.metrics-block__list {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   grid-template-rows: repeat(2, auto);
+   gap: 40px;
+   @media only screen and (min-width: 320px) and (max-width: 767px) {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+   }
+}
+.metrics-block__item-wrapper:nth-of-type(1) {
+   padding-left: 120px;
+   @media only screen and (max-width: 1024px) {
+      padding-left: 60px;
+   }
+   @media only screen and (max-width: 912px) {
+      padding-left: 20px;
+   }
+}
+.metrics-block__item-wrapper:nth-of-type(4) {
+   padding-right: 120px;
+   @media only screen and (max-width: 1024px) {
+      padding-right: 60px;
+   }
+   @media only screen and (max-width: 912px) {
+      padding-right: 20px;
+   }
+}
+.metrics-block__item {
+   background: #fbfbfb;
+   padding: 30px;
+   @media only screen and (min-width: 320px) and (max-width: 767px) {
+      display: flex;
+   }
+}
+.metrics-block__item.industry,
+.metrics-block__item.clients {
+   border-radius: 30px;
+}
+.metrics-block__item.candidate {
+   border-radius: 30px 0px 0px 30px;
+   @media only screen and (min-width: 320px) and (max-width: 767px) {
+      border-radius: 0px 30px 30px 0px;
+      justify-content: flex-end;
+   }
+}
+.metrics-block__item.employee {
+   border-radius: 0px 30px 30px 0px;
+   @media only screen and (min-width: 320px) and (max-width: 767px) {
+      border-radius: 30px 0px 0px 30px;
+   }
+}
+/* I group some style together here to avoid over duplication of breakpoints */
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+   .metrics-block__item-wrapper:nth-of-type(2) {
+      padding-right: 20px;
+   }
+   .metrics-block__item-wrapper:nth-of-type(3) {
+      padding-left: 20px;
+   }
+   .metrics-block__item.industry {
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px;
+   }
+   .metrics-block__item.clients {
+      border-top-left-radius: 0px;
+      border-bottom-left-radius: 0px;
+      justify-content: flex-end;
+   }
+}
+.metrics-block__item-number {
+   font-family: "Roboto", sans-serif;
+   font-size: 6.25rem;
+   line-height: 110px;
+   font-weight: 500;
+   color: #d8beff;
+   @media only screen and (max-width: 1024px) {
+      font-size: 4.375rem;
+      line-height: 77px;
+   }
+   @media only screen and (max-width: 768px) {
+      font-size: 4rem;
+      line-height: 70.4px;
+   }
+}
+.metrics-block__item-label {
+   font-family: "Roboto", sans-serif;
+   font-size: 1.5rem;
+   line-height: 28.8px;
+   font-weight: 400;
+   color: #000;
+   @media only screen and (max-width: 1024px) {
+      font-size: 1rem;
+      line-height: 19.2px;
+   }
+}

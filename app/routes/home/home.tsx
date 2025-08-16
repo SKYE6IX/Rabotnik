@@ -1,6 +1,7 @@
 import type { Route } from "./+types/home";
 import Hero from "~/components/hero/Hero";
 import HowWeWork from "~/components/how-we-work/HowWeWork";
+import MetricsBlock from "~/components/metrics-block/MetricsBlock";
 import heroImage from "./hero-image.jpg";
 import "./home.css";
 
@@ -26,6 +27,7 @@ export default function Home() {
             </h1>
          </Hero>
          <HowWeWork />
+         <MetricsBlock />
       </div>
    );
 }
