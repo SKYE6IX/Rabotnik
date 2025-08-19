@@ -1,30 +1,36 @@
 import React, { useRef } from "react";
 import { gsap } from "gsap";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import Button from "../button/Button";
 import image from "./how-we-work.jpg";
 import "./how-we-work.css";
 
 function HowWeWork() {
-   const animateRef = useRef<HTMLDivElement>(null);
-   const triggerRef = useRef<HTMLDivElement>(null);
-   useGSAP(() => {
-      gsap.set(animateRef.current, { xPercent: 110, autoAlpha: 0 });
-      gsap.to(animateRef.current, {
-         duration: 1,
-         xPercent: () => 0,
-         autoAlpha: 1,
-         ease: "back.out(1)",
-         scrollTrigger: {
-            trigger: triggerRef.current,
-            start: "90% bottom",
-            invalidateOnRefresh: true,
-         },
-      });
-   });
+   const containerRef = useRef<HTMLDivElement>(null);
+   useGSAP(
+      () => {
+         gsap.set(".how-we-work__bottom-button", {
+            xPercent: 100,
+            autoAlpha: 0,
+         });
+         gsap.to(".how-we-work__bottom-button", {
+            duration: 1,
+            xPercent: 0,
+            autoAlpha: 1,
+            ease: "back.out(1)",
+            scrollTrigger: {
+               trigger: ".how-we-work__bottom-button",
+               start: "top 80%",
+               toggleActions: "play none none reverse",
+            },
+         });
+      },
+      { scope: containerRef }
+   );
 
    return (
-      <div className="how-we-work">
+      <div className="how-we-work" ref={containerRef}>
          <h3 className="how-we-work__title">
             <span>
                <svg
@@ -128,7 +134,7 @@ function HowWeWork() {
                   </li>
                </ul>
             </div>
-            <div className="how-we-work__bottom" ref={triggerRef}>
+            <div className="how-we-work__bottom">
                <h4 className="how-we-work__bottom-title">
                   <svg
                      xmlns="http://www.w3.org/2000/svg"
@@ -151,10 +157,7 @@ function HowWeWork() {
                </p>
                <div className="how-we-work__bottom-shapes">
                   <div className="how-we-work__bottom-shape-wrapper">
-                     <div
-                        ref={animateRef}
-                        className="how-we-work__bottom-button"
-                     >
+                     <div className="how-we-work__bottom-button">
                         <Button label="Оставить заявку" color="black" />
                      </div>
                      <svg

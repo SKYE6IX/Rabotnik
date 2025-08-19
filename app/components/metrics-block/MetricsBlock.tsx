@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import "./metrics-block.css";
 
@@ -21,9 +22,13 @@ function MetricsBlock() {
          const metrics = gsap.utils.toArray(
             ".metrics-block__item-number"
          ) as HTMLElement[];
-
          metrics.forEach((el, i) => {
             gsap.to(el, {
+               scrollTrigger: {
+                  trigger: el.parentNode as HTMLDivElement,
+                  start: "top 80%",
+                  end: `${(el.parentNode as HTMLDivElement).offsetHeight} top`,
+               },
                innerText: removeCommas(el.dataset.countEnd as string),
                snap: {
                   innerText: Number(removeCommas(el.dataset.countBy as string)),
@@ -33,10 +38,8 @@ function MetricsBlock() {
                },
                duration: 1.3,
                ease: "none",
-               scrollTrigger: {
-                  trigger: el.parentNode as HTMLDivElement,
-                  start: "top 90%",
-                  end: `${(el.parentNode as HTMLDivElement).offsetHeight} top`,
+               onComplete: () => {
+                  ScrollTrigger.refresh();
                },
             });
          });

@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { SplitText } from "gsap/SplitText";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Button from "../button/Button";
 import { servicesList } from "./services-list";
 import "./service-list-block.css";
@@ -10,38 +11,45 @@ function ServiceListBlock() {
    const containerRef = useRef<HTMLDivElement>(null);
    const { contextSafe } = useGSAP(
       () => {
+         // Heading animation
          const split = SplitText.create(".service-list-block__body-heading", {
             type: "lines",
          });
-         const itemList = gsap.utils.toArray(
-            ".service-list-block__list-item"
-         ) as HTMLDivElement[];
          gsap.from(split.lines, {
-            yPercent: 110,
+            yPercent: 100,
             autoAlpha: 0,
             stagger: 0.2,
             ease: "sine.out",
             scrollTrigger: {
                trigger: ".service-list-block__body-heading",
-               start: "top 80%",
+               start: "top 90%",
+               toggleActions: "play none none reverse",
             },
          });
-         itemList.forEach((el) => {
-            gsap.from(el, {
-               yPercent: 20,
-               autoAlpha: 0,
-               ease: "sine.out",
-               duration: 1,
-               scrollTrigger: {
-                  trigger: el,
-                  start: "top 80%",
-                  end: `+=${el.offsetHeight * 1.5}`,
-               },
-            });
+         // Car item animation
+         gsap.set(".service-list-block__list-item", {
+            yPercent: 20,
+            autoAlpha: 0,
+         });
+         ScrollTrigger.batch(".service-list-block__list-item", {
+            onEnter: (batch) => {
+               gsap.to(batch, {
+                  yPercent: 0,
+                  autoAlpha: 1,
+                  ease: "sine.out",
+                  duration: 1,
+                  stagger: 0.2,
+               });
+            },
+            onLeaveBack: (batch) => {
+               gsap.to(batch, { yPercent: 20, autoAlpha: 0, ease: "sine.out" });
+            },
+            start: "top 90%",
          });
       },
       { scope: containerRef }
    );
+
    const handleMouseEnter = contextSafe(
       (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
          const shapeContainer = e.currentTarget.querySelector(

@@ -3,6 +3,7 @@ import Hero from "~/components/hero/Hero";
 import HowWeWork from "~/components/how-we-work/HowWeWork";
 import MetricsBlock from "~/components/metrics-block/MetricsBlock";
 import ServiceListBlock from "~/components/service-list-block/ServiceListBlock";
+import OurPlatform from "~/components/our-platform/OurPlatform";
 import heroImage from "./hero-image.jpg";
 import "./home.css";
 
@@ -30,6 +31,7 @@ export default function Home() {
          <HowWeWork />
          <MetricsBlock />
          <ServiceListBlock />
+         <OurPlatform />
       </div>
    );
 }

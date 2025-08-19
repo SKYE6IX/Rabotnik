@@ -27,6 +27,17 @@
    font-weight: 400;
    color: rgba(255, 255, 255, 1);
 }
+.button__icon.mobile {
+   display: none;
+   @media only screen and (max-width: 1024px) {
+      display: block;
+   }
+}
+.button__icon.large {
+   @media only screen and (max-width: 1024px) {
+      display: none;
+   }
+}
 .button__icon .button__icon-path-2,
 .button__icon .button__icon-path-1 {
    transition: transform 0.3s ease-in;
