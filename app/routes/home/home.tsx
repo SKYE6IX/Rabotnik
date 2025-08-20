@@ -4,6 +4,7 @@ import HowWeWork from "~/components/how-we-work/HowWeWork";
 import MetricsBlock from "~/components/metrics-block/MetricsBlock";
 import ServiceListBlock from "~/components/service-list-block/ServiceListBlock";
 import OurPlatform from "~/components/our-platform/OurPlatform";
+import AboutUs from "~/components/about-us-block/AboutUs";
 import heroImage from "./hero-image.jpg";
 import "./home.css";
 
@@ -32,6 +33,7 @@ export default function Home() {
          <MetricsBlock />
          <ServiceListBlock />
          <OurPlatform />
+         <AboutUs />
       </div>
    );
 }

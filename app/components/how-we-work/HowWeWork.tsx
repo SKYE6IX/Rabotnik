@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
 import { gsap } from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import Button from "../button/Button";
 import image from "./how-we-work.jpg";
@@ -30,7 +29,7 @@ function HowWeWork() {
    );
 
    return (
-      <div className="how-we-work" ref={containerRef}>
+      <section className="how-we-work" ref={containerRef}>
          <h3 className="how-we-work__title">
             <span>
                <svg
@@ -190,7 +189,7 @@ function HowWeWork() {
                </div>
             </div>
          </div>
-      </div>
+      </section>
    );
 }
 export default HowWeWork;

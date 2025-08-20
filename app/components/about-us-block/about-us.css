@@ -1,0 +1,192 @@
+.about-us-block {
+   overflow: hidden;
+   width: 100%;
+   margin-top: 100px;
+   padding-bottom: 50px;
+   @media only screen and (max-width: 1024px) {
+      margin-top: 80px;
+   }
+   @media only screen and (min-width: 320px) and (max-width: 767px) {
+      margin-top: 40px;
+   }
+}
+.about-us-block__body {
+   width: 100%;
+   padding: 50px 120px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   background-color: #fbfbfb;
+   border-radius: 60px 60px 0px 0px;
+   @media only screen and (max-width: 1024px) {
+      padding: 30px 60px;
+   }
+   @media only screen and (min-width: 320px) and (max-width: 767px) {
+      padding: 20px;
+   }
+}
+.about-us-block__title {
+   align-self: flex-start;
+   margin-bottom: 30px;
+   font-family: "Roboto", sans-serif;
+   font-size: 1.125rem;
+   line-height: 21.6px;
+   font-weight: 300;
+   color: #000;
+   display: flex;
+   align-items: center;
+   gap: 5px;
+   @media only screen and (min-width: 320px) and (max-width: 767px) {
+      margin-bottom: 15px;
+      padding-left: 20px;
+   }
+}
+.about-us-block__heading-text {
+   max-width: 1240px;
+   font-family: "Roboto", sans-serif;
+   font-size: 3.75rem;
+   line-height: 66px;
+   font-weight: 400;
+   color: #000;
+   text-align: center;
+   @media only screen and (max-width: 1024px) {
+      font-size: 2.5rem;
+      line-height: 48px;
+   }
+   @media only screen and (min-width: 320px) and (max-width: 767px) {
+      border: 1px solid reds;
+      width: 100%;
+      font-size: 2rem;
+      line-height: 38.4px;
+   }
+}
+.about-us-block__heading-text .highlight {
+   color: #d8beff;
+}
+.about-us-block__sub-heading-wrapper {
+   align-self: flex-end;
+   margin-top: 60px;
+   max-width: 850px;
+   @media only screen and (max-width: 1024px) {
+      margin-top: 30px;
+      max-width: 700px;
+   }
+   @media only screen and (max-width: 912px) {
+      width: 600px;
+   }
+   @media only screen and (min-width: 320px) and (max-width: 767px) {
+      width: 100%;
+   }
+}
+.about-us-block__sub-heading-text {
+   font-family: "Roboto", sans-serif;
+   font-size: 2.5rem;
+   line-height: 48px;
+   color: #000;
+   font-weight: 400;
+   letter-spacing: -0.4px;
+   @media only screen and (max-width: 1024px) {
+      font-size: 2rem;
+      line-height: 38.4px;
+   }
+   @media only screen and (max-width: 912px) {
+      font-size: 1.75rem;
+      line-height: 33.6px;
+   }
+   @media only screen and (min-width: 320px) and (max-width: 767px) {
+      font-size: 1.5rem;
+      line-height: 28.8px;
+      text-align: end;
+   }
+}
+.about-us-block__sub-heading-text .space {
+   width: 150px;
+   display: inline-block;
+   @media only screen and (max-width: 1024px) {
+      width: 110px;
+   }
+   @media only screen and (min-width: 320px) and (max-width: 767px) {
+      width: 50px;
+   }
+}
+.about-us-block__buttons-wrapper {
+   margin-top: 50px;
+   display: inline-flex;
+   gap: 30px;
+   @media only screen and (max-width: 1024px) {
+      margin-top: 30px;
+   }
+   @media only screen and (min-width: 320px) and (max-width: 767px) {
+      gap: 20px;
+   }
+}
+.about-us-block__slide-wrapper {
+   margin-top: 100px;
+   position: relative;
+   @media only screen and (max-width: 1024px) {
+      margin-top: 80px;
+   }
+   @media only screen and (min-width: 320px) and (max-width: 767px) {
+      margin-top: 40px;
+   }
+}
+.about-us-block__slide-wrapper::before,
+.about-us-block__slide-wrapper::after {
+   position: absolute;
+   width: 250px;
+   height: 140px;
+   z-index: 2;
+   content: "";
+   @media only screen and (max-width: 1024px) {
+      width: 200px;
+      height: 100px;
+   }
+   @media only screen and (min-width: 320px) and (max-width: 767px) {
+      width: 150px;
+      height: 50px;
+   }
+}
+.about-us-block__slide-wrapper::before {
+   left: 0px;
+   top: 0px;
+   background: linear-gradient(
+      to left,
+      rgba(255, 255, 255, 0),
+      rgb(255, 255, 255)
+   );
+}
+.about-us-block__slide-wrapper::after {
+   right: 0px;
+   top: 0px;
+   background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0),
+      rgb(255, 255, 255)
+   );
+}
+
+.about-us-block__slides {
+   height: 140px;
+   position: relative;
+   z-index: 1;
+   left: -1000px;
+   @media only screen and (max-width: 1024px) {
+      height: 100px;
+   }
+   @media only screen and (min-width: 320px) and (max-width: 767px) {
+      height: 50px;
+   }
+}
+.about-us-block__slide-container {
+   position: absolute;
+}
+.about-us-block__slide {
+   width: auto;
+   height: 140px;
+   @media only screen and (max-width: 1024px) {
+      height: 100px;
+   }
+   @media only screen and (min-width: 320px) and (max-width: 767px) {
+      height: 50px;
+   }
+}
