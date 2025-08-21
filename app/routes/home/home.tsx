@@ -6,6 +6,7 @@ import ServiceListBlock from "~/components/service-list-block/ServiceListBlock";
 import OurPlatform from "~/components/our-platform/OurPlatform";
 import AboutUs from "~/components/about-us-block/AboutUs";
 import ContactUs from "~/components/contact-us/ContactUs";
+import Faq from "~/components/faq/Faq";
 import heroImage from "./hero-image.jpg";
 import "./home.css";
 
@@ -36,6 +37,7 @@ export default function Home() {
          <OurPlatform />
          <AboutUs />
          <ContactUs />
+         <Faq />
       </div>
    );
 }
