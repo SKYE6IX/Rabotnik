@@ -32,7 +32,7 @@ function AboutUs() {
                tween = null;
             }
             const widths: number[] = [];
-            const gap = 40;
+            const gap = 90;
             const slides = gsap.utils.toArray(
                ".about-us-block__slide-container"
             ) as HTMLDivElement[];
@@ -52,7 +52,7 @@ function AboutUs() {
                },
             });
             tween = gsap.to(".about-us-block__slide-container", {
-               duration: 30,
+               duration: 50,
                ease: "none",
                x: `+=${totalWidth}`,
                modifiers: {
