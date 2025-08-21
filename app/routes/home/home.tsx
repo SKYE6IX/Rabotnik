@@ -1,4 +1,3 @@
-import type { Route } from "./+types/home";
 import Hero from "~/components/hero/Hero";
 import HowWeWork from "~/components/how-we-work/HowWeWork";
 import MetricsBlock from "~/components/metrics-block/MetricsBlock";
@@ -7,15 +6,9 @@ import OurPlatform from "~/components/our-platform/OurPlatform";
 import AboutUs from "~/components/about-us-block/AboutUs";
 import ContactUs from "~/components/contact-us/ContactUs";
 import Faq from "~/components/faq/Faq";
+import TextSlider from "~/components/text-slider/TextSlider";
 import heroImage from "./hero-image.jpg";
 import "./home.css";
-
-export function meta({}: Route.MetaArgs) {
-   return [
-      { title: "New React Router App" },
-      { name: "description", content: "Welcome to React Router!" },
-   ];
-}
 
 export default function Home() {
    return (
@@ -38,6 +31,7 @@ export default function Home() {
          <AboutUs />
          <ContactUs />
          <Faq />
+         <TextSlider />
       </div>
    );
 }

@@ -31,6 +31,14 @@ export const links: Route.LinksFunction = () => [
       href: "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap",
    },
 ];
+
+export function meta({}: Route.MetaArgs) {
+   return [
+      { title: "New React Router App" },
+      { name: "description", content: "Welcome to React Router!" },
+   ];
+}
+
 export function Layout({ children }: { children: React.ReactNode }) {
    return (
       <html lang="ru">

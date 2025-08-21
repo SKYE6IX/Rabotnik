@@ -1,0 +1,39 @@
+.text-slider {
+   margin-top: 100px;
+   padding-bottom: 50px;
+   overflow: hidden;
+   @media only screen and (max-width: 1024px) {
+      margin-top: 80px;
+   }
+   @media only screen and (max-width: 768px) {
+      margin-top: 40px;
+   }
+}
+.text-slider__slide {
+   --height: 176px;
+   display: flex;
+   white-space: nowrap;
+   position: relative;
+   height: var(--height);
+   @media only screen and (max-width: 1024px) {
+      --height: 132px;
+   }
+   @media only screen and (max-width: 768px) {
+      --height: 66px;
+   }
+}
+.text-slider__slide-text {
+   position: absolute;
+   font-family: "Roboto", sans-serif;
+   font-size: 10rem;
+   line-height: var(--height);
+   font-weight: 400;
+   color: #000;
+   display: inline-block;
+   @media only screen and (max-width: 1024px) {
+      font-size: 7.5rem;
+   }
+   @media only screen and (max-width: 768px) {
+      font-size: 3.75rem;
+   }
+}
