@@ -7,8 +7,6 @@ import Button from "../button/Button";
 import { servicesList } from "./services-list";
 import "./service-list-block.css";
 
-const urlPrefix = "/Rabotnik";
-
 function ServiceListBlock() {
    const containerRef = useRef<HTMLDivElement>(null);
    const { contextSafe } = useGSAP(
@@ -115,7 +113,7 @@ function ServiceListBlock() {
                      <div className="service-list-block__list-item-inner">
                         <div className="service-list-block__list-item-image-wrapper">
                            <img
-                              src={urlPrefix + service.image}
+                              src={service.image}
                               alt={service.label}
                               data-testid="service-list-block-image"
                            />
@@ -123,7 +121,7 @@ function ServiceListBlock() {
                         <div className="service-list-block__list-item-icon">
                            {service.icon && (
                               <img
-                                 src={urlPrefix + service.icon}
+                                 src={service.icon}
                                  alt="An icon place on the service image"
                               />
                            )}

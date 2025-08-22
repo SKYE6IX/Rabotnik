@@ -3,26 +3,22 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import Button from "../button/Button";
 import "./about-us.css";
-
 const slides = [
-   "/about-us/assets/slide1.png",
-   "/about-us/assets/slide2.png",
-   "/about-us/assets/slide3.png",
-   "/about-us/assets/slide4.png",
-   "/about-us/assets/slide5.png",
-   "/about-us/assets/slide6.png",
-   "/about-us/assets/slide7.png",
-   "/about-us/assets/slide8.png",
-   "/about-us/assets/slide9.png",
-   "/about-us/assets/slide10.png",
-   "/about-us/assets/slide11.png",
-   "/about-us/assets/slide12.png",
-   "/about-us/assets/slide13.png",
-   "/about-us/assets/slide14.png",
+   "/slide1.png",
+   "/slide2.png",
+   "/slide3.png",
+   "/slide4.png",
+   "/slide5.png",
+   "/slide6.png",
+   "/slide7.png",
+   "/slide8.png",
+   "/slide9.png",
+   "/slide10.png",
+   "/slide11.png",
+   "/slide12.png",
+   "/slide13.png",
+   "/slide14.png",
 ];
-
-const urlPrefix = "/Rabotnik";
-
 function AboutUs() {
    const containerRef = useRef<HTMLDivElement>(null);
    useGSAP(
@@ -63,6 +59,7 @@ function AboutUs() {
                repeat: -1,
             });
          };
+
          runAnimation();
          const handleResize = () => {
             runAnimation();
@@ -133,7 +130,7 @@ function AboutUs() {
                {slides.map((slide, i) => (
                   <div key={i} className="about-us-block__slide-container">
                      <img
-                        src={urlPrefix + slide}
+                        src={slide}
                         alt="An icon of an image moving to the left"
                         className="about-us-block__slide"
                         data-testid="about-us-slide-image"
