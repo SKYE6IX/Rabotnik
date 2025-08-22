@@ -2,11 +2,10 @@
    "name": "rabotnik",
    "private": true,
    "type": "module",
-   "homepage": "https://skye6ix.github.io/Rabotnik",
+   "homepage": "https://skye6ix.github.io",
    "scripts": {
       "build": "react-router build",
       "dev": "react-router dev",
-      "postbuild": "cp build/client/index.html",
       "predeploy": "npm run build",
       "deploy": "gh-pages -d build/client",
       "start": "react-router-serve ./build/server/index.js",

@@ -21,6 +21,8 @@ const slides = [
    "/about-us/assets/slide14.png",
 ];
 
+const urlPrefix = "/Rabotnik";
+
 function AboutUs() {
    const containerRef = useRef<HTMLDivElement>(null);
    useGSAP(
@@ -131,7 +133,7 @@ function AboutUs() {
                {slides.map((slide, i) => (
                   <div key={i} className="about-us-block__slide-container">
                      <img
-                        src={slide}
+                        src={urlPrefix + slide}
                         alt="An icon of an image moving to the left"
                         className="about-us-block__slide"
                         data-testid="about-us-slide-image"
