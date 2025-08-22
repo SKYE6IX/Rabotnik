@@ -22,13 +22,10 @@ function OurPlatform() {
             stagger: 0.5,
             scrollTrigger: {
                trigger: ".our-platform__bottom-content-right",
-               start: "top 90%",
+               start: "top 80%",
             },
          });
-         const split1 = SplitText.create(".our-platform__body-intro", {
-            type: "lines",
-         });
-         const split2 = SplitText.create(".our-platform__bottom-content-text", {
+         const split = SplitText.create(".our-platform__bottom-content-text", {
             type: "lines",
          });
          const animations: {
@@ -47,7 +44,7 @@ function OurPlatform() {
                initialVars: { xPercent: -50, autoAlpha: 0 },
             },
             {
-               target: split1.lines,
+               target: ".our-platform__body-intro",
                animateVars: { yPercent: 0, autoAlpha: 1, stagger: 0.3 },
                initialVars: { yPercent: 30, autoAlpha: 0 },
             },
@@ -57,11 +54,12 @@ function OurPlatform() {
                initialVars: { xPercent: 100, autoAlpha: 0 },
             },
             {
-               target: split2.lines,
+               target: split.lines,
                animateVars: { yPercent: 0, autoAlpha: 1, stagger: 0.3 },
                initialVars: { yPercent: 30, autoAlpha: 0 },
             },
          ];
+
          animations.forEach(({ target, animateVars, initialVars }) => {
             gsap.set(target as HTMLElement, { ...initialVars });
             ScrollTrigger.batch(target as HTMLElement, {
@@ -151,7 +149,12 @@ function OurPlatform() {
                   </div>
                </div>
                <div className="our-platform__features-button">
-                  <Button color="orange" label="Оставить заявку" />
+                  <Button
+                     color="orange"
+                     label="Оставить заявку"
+                     type="link"
+                     href="#contact"
+                  />
                </div>
                <ul className="our-platform__feature-list">
                   <li

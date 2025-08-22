@@ -131,7 +131,12 @@ function Footer() {
             <div className="footer__top-section">
                <div className="footer__title-wrapper">
                   <h3 className="footer__title">Нужен хороший трафик?</h3>
-                  <Button color="orange" label="Обсудим детали?" />
+                  <Button
+                     color="orange"
+                     label="Обсудим детали?"
+                     type="link"
+                     href="#contact"
+                  />
                </div>
                <div className="footer__link-contact-wrapper">
                   <ul className="footer__link-list">

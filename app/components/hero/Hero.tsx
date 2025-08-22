@@ -98,10 +98,20 @@ function Hero({ image, showMetrics, subTitle, children }: HeroProps) {
                </div>
                <div className="hero__button-wrapper">
                   <div className="hero__button_large">
-                     <Button label="Оставить заявку" color="purple" />
+                     <Button
+                        label="Оставить заявку"
+                        color="purple"
+                        type="link"
+                        href="#contact"
+                     />
                   </div>
                   <div className="hero__button_small">
-                     <Button label="Связаться" color="purple" />
+                     <Button
+                        label="Связаться"
+                        color="purple"
+                        href="#contact"
+                        type="link"
+                     />
                   </div>
                   <svg
                      width="30"

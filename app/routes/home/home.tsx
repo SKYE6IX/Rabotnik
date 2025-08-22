@@ -28,7 +28,9 @@ export default function Home() {
          <MetricsBlock />
          <ServiceListBlock />
          <OurPlatform />
-         <AboutUs />
+         <div id="about-us">
+            <AboutUs />
+         </div>
          <ContactUs />
          <Faq />
          <TextSlider />

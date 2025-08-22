@@ -7,12 +7,10 @@ import MobileMenu from "../mobile-menu/MobileMenu";
 import logo from "/rabotnik-logo.webp";
 import "./navigation.css";
 
-gsap.registerPlugin(useGSAP);
-
 const navigationsList = [
    { name: "Услуги", href: "/service" },
    { name: "Наша платформа", href: "/platform" },
-   { name: "О нас", href: "about" },
+   { name: "О нас", href: "#about-us" },
    { name: "Блог", href: "/blog" },
 ];
 
@@ -49,7 +47,6 @@ function Navigation() {
       },
       [tl]
    );
-
    const toggleMenu = () => {
       setIsMenuOpen(!isMenuOpen);
    };
@@ -81,7 +78,12 @@ function Navigation() {
                </ul>
             </nav>
             <div className="header__cta-button">
-               <Button color="orange" label="Связаться" />
+               <Button
+                  color="orange"
+                  label="Связаться"
+                  type="link"
+                  href="#contact"
+               />
             </div>
             <button className="header__menu-bar" onClick={toggleMenu}>
                <svg
@@ -119,6 +121,7 @@ function Navigation() {
             navList={navigationsList}
             isActive={isMenuOpen}
             addAnimation={addAnimation}
+            toggleMenu={toggleMenu}
          />
       </header>
    );

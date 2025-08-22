@@ -154,7 +154,12 @@ function ServiceListBlock() {
                                     fill="white"
                                  />
                               </svg>
-                              <Button color="purple" label="Подробнее" />
+                              <Button
+                                 color="purple"
+                                 label="Подробнее"
+                                 type="link"
+                                 href={service.href}
+                              />
                            </div>
                         </div>
                      </div>

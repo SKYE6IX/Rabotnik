@@ -157,7 +157,12 @@ function HowWeWork() {
                <div className="how-we-work__bottom-shapes">
                   <div className="how-we-work__bottom-shape-wrapper">
                      <div className="how-we-work__bottom-button">
-                        <Button label="Оставить заявку" color="black" />
+                        <Button
+                           label="Оставить заявку"
+                           color="black"
+                           href="#contact"
+                           type="link"
+                        />
                      </div>
                      <svg
                         xmlns="http://www.w3.org/2000/svg"

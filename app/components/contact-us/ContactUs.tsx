@@ -98,7 +98,7 @@ function ContactUs() {
                      />
                   </label>
                   <div className="contact-us__form-footer">
-                     <Button label="Отправить" color="orange" />
+                     <Button label="Отправить" color="orange" type="submit" />
                      <p className="contact-us__form-term">
                         Нажимая кнопку "Отправить", я даю согласие на обработку
                         моих персональных данных

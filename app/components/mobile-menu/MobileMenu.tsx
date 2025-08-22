@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { NavLink } from "react-router";
+import { Link } from "react-router";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import Button from "../button/Button";
@@ -14,9 +14,15 @@ type MobileMenuProp = {
    navList: NavigationsList[];
    isActive: boolean;
    addAnimation: (animation: GSAPTween) => void;
+   toggleMenu: () => void;
 };
 
-function MobileMenu({ navList, isActive, addAnimation }: MobileMenuProp) {
+function MobileMenu({
+   navList,
+   isActive,
+   addAnimation,
+   toggleMenu,
+}: MobileMenuProp) {
    const menuRef = useRef<HTMLDivElement>(null);
    const [initialRender, setInitialRender] = useState(true);
 
@@ -43,14 +49,23 @@ function MobileMenu({ navList, isActive, addAnimation }: MobileMenuProp) {
          <nav className="mobile-menu__nav">
             <ul className="mobile-menu__nav-container">
                {navList.map((nav) => (
-                  <li key={nav.name} className="mobile-menu__nav-item">
-                     <NavLink to={nav.href}>{nav.name}</NavLink>
+                  <li
+                     key={nav.name}
+                     className="mobile-menu__nav-item"
+                     onClick={toggleMenu}
+                  >
+                     <Link to={nav.href}>{nav.name}</Link>
                   </li>
                ))}
             </ul>
          </nav>
          <div className="mobile-menu__cta-button">
-            <Button color="orange" label="Связаться" />
+            <Button
+               color="orange"
+               label="Связаться"
+               type="link"
+               href="#contact"
+            />
          </div>
       </div>
    );

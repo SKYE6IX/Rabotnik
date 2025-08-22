@@ -9,7 +9,7 @@ describe("Button component", () => {
       const mockLabel = "TestButton";
       render(
          <MemoryRouter>
-            <Button label={mockLabel} color="orange" />
+            <Button label={mockLabel} color="orange" type="link" />
          </MemoryRouter>
       );
 
@@ -28,7 +28,7 @@ describe("Button component", () => {
       const mockLabel = "TestButton";
       render(
          <MemoryRouter>
-            <Button label={mockLabel} color="orange" />
+            <Button label={mockLabel} color="orange" type="link" />
          </MemoryRouter>
       );
 

@@ -112,8 +112,18 @@ function AboutUs() {
                </h5>
             </div>
             <div className="about-us-block__buttons-wrapper">
-               <Button label="Услуги" color="purple" />
-               <Button label="Оставить заявку" color="black" />
+               <Button
+                  label="Услуги"
+                  color="purple"
+                  type="link"
+                  href="/service"
+               />
+               <Button
+                  label="Оставить заявку"
+                  color="black"
+                  type="link"
+                  href="#contact"
+               />
             </div>
          </div>
          <div className="about-us-block__slide-wrapper">
