@@ -3,8 +3,8 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { SplitText } from "gsap/SplitText";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Button from "../button/Button";
 import { servicesList } from "./services-list";
+import Button from "../button/Button";
 import "./service-list-block.css";
 
 function ServiceListBlock() {
@@ -26,7 +26,6 @@ function ServiceListBlock() {
                toggleActions: "play none none reverse",
             },
          });
-         // Car item animation
          gsap.set(".service-list-block__list-item", {
             yPercent: 20,
             autoAlpha: 0,

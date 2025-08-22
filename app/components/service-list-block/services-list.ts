@@ -1,38 +1,50 @@
+import serviceImage1 from "/services-list/service-1.jpg";
+import serviceImage2 from "/services-list/service-2.jpg";
+import serviceImage3 from "/services-list/service-3.jpg";
+import serviceImage4 from "/services-list/service-4.png";
+import serviceImage5 from "/services-list/service-5.jpg";
+import serviceImage6 from "/services-list/service-5.jpg";
+import serviceIcon1 from "/services-list/service-1-icon.png";
+import serviceIcon3 from "/services-list/service-3-icon.png";
+import serviceIcon4 from "/services-list/service-4-icon.png";
+import serviceIcon5 from "/services-list/service-5-icon.png";
+import serviceIcon6 from "/services-list/service-6-icon.png";
+
 export const servicesList = [
    {
       label: "Создание посадочных страниц и сайтов",
-      image: "/service-1.jpg",
-      icon: "/service-1-icon.png",
+      image: serviceImage1,
+      icon: serviceIcon1,
       href: "#",
    },
    {
       label: "Разработка креативных концепций и рекламных материалов",
-      image: "/service-2.jpg",
+      image: serviceImage2,
       icon: "",
       href: "#",
    },
    {
       label: "Ведение рекламных кампаний",
-      image: "/service-3.jpg",
-      icon: "/service-3-icon.png",
+      image: serviceImage3,
+      icon: serviceIcon3,
       href: "#",
    },
    {
       label: "Генерация кадрового трафика",
-      image: "/service-4.png",
-      icon: "/service-4-icon.png",
+      image: serviceImage4,
+      icon: serviceIcon4,
       href: "#",
    },
    {
       label: "Размещение в сети TG каналов Rabotnik",
-      image: "/service-5.jpg",
-      icon: "/service-5-icon.png",
+      image: serviceImage5,
+      icon: serviceIcon5,
       href: "#",
    },
    {
       label: "Обработка лидов через call-центр (ресечинг)",
-      image: "/service-6.jpg",
-      icon: "/service-6-icon.png",
+      image: serviceImage6,
+      icon: serviceIcon6,
       href: "#",
    },
 ];

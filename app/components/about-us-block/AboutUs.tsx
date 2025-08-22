@@ -2,23 +2,39 @@ import React, { useRef } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import Button from "../button/Button";
+import slide1 from "/about-us/slide1.png";
+import slide2 from "/about-us/slide2.png";
+import slide3 from "/about-us/slide3.png";
+import slide4 from "/about-us/slide4.png";
+import slide5 from "/about-us/slide5.png";
+import slide6 from "/about-us/slide6.png";
+import slide7 from "/about-us/slide7.png";
+import slide8 from "/about-us/slide8.png";
+import slide9 from "/about-us/slide9.png";
+import slide10 from "/about-us/slide10.png";
+import slide11 from "/about-us/slide11.png";
+import slide12 from "/about-us/slide12.png";
+import slide13 from "/about-us/slide13.png";
+import slide14 from "/about-us/slide14.png";
 import "./about-us.css";
+
 const slides = [
-   "/slide1.png",
-   "/slide2.png",
-   "/slide3.png",
-   "/slide4.png",
-   "/slide5.png",
-   "/slide6.png",
-   "/slide7.png",
-   "/slide8.png",
-   "/slide9.png",
-   "/slide10.png",
-   "/slide11.png",
-   "/slide12.png",
-   "/slide13.png",
-   "/slide14.png",
+   slide1,
+   slide2,
+   slide3,
+   slide4,
+   slide5,
+   slide6,
+   slide7,
+   slide8,
+   slide9,
+   slide10,
+   slide11,
+   slide12,
+   slide13,
+   slide14,
 ];
+
 function AboutUs() {
    const containerRef = useRef<HTMLDivElement>(null);
    useGSAP(

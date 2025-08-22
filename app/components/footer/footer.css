@@ -44,7 +44,7 @@
    position: relative;
    padding: 5px 20px 20px 20px;
    @media only screen and (min-width: 320px) and (max-width: 767px) {
-      padding: 5px 10px 10px 10px;
+      padding: 5px 10px 10px 0px;
    }
 }
 .footer__social-list {
@@ -54,10 +54,10 @@
    gap: 10px;
 }
 .footer__social-link {
-   width: 32px;
-   height: 32px;
+   width: 36px;
+   height: 36px;
    border-radius: 50%;
-   display: inline-flex;
+   display: flex;
    align-items: center;
    justify-content: center;
    background-color: #f25900;
