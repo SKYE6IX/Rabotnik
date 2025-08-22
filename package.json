@@ -2,9 +2,12 @@
    "name": "rabotnik",
    "private": true,
    "type": "module",
+   "homepage": "https://skye6ix.github.io/Rabotnik",
    "scripts": {
       "build": "react-router build",
       "dev": "react-router dev",
+      "predeploy": "npm run build",
+      "deploy": "gh-pages -d build/client",
       "start": "react-router-serve ./build/server/index.js",
       "typecheck": "react-router typegen && tsc",
       "test": "vitest"
@@ -28,6 +31,7 @@
       "@types/node": "^20",
       "@types/react": "^19.1.10",
       "@types/react-dom": "^19.1.7",
+      "gh-pages": "^6.3.0",
       "jsdom": "^26.1.0",
       "typescript": "^5.8.3",
       "vite": "^6.3.3",
