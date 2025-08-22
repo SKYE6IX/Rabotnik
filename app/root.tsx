@@ -5,6 +5,7 @@ import {
    Outlet,
    Scripts,
    ScrollRestoration,
+   BrowserRouter,
 } from "react-router";
 import type { Route } from "./+types/root";
 import Navigation from "./components/navigation/Navigation";
@@ -63,11 +64,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
 export default function App() {
    return (
-      <>
+      <BrowserRouter basename="/Rabotnik/">
          <Navigation />
          <Outlet />
          <Footer />
-      </>
+      </BrowserRouter>
    );
 }
 
