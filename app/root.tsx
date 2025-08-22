@@ -8,6 +8,7 @@ import {
 } from "react-router";
 import type { Route } from "./+types/root";
 import Navigation from "./components/navigation/Navigation";
+import Footer from "./components/footer/Footer";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -65,6 +66,7 @@ export default function App() {
       <>
          <Navigation />
          <Outlet />
+         <Footer />
       </>
    );
 }
