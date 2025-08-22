@@ -5,7 +5,6 @@ import {
    Outlet,
    Scripts,
    ScrollRestoration,
-   BrowserRouter,
 } from "react-router";
 import type { Route } from "./+types/root";
 import Navigation from "./components/navigation/Navigation";
@@ -14,12 +13,10 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
-import { GSDevTools } from "gsap/GSDevTools";
-
 import "./global.css";
 
 // Global register gsap animation for all components and pages
-gsap.registerPlugin(useGSAP, ScrollTrigger, SplitText, GSDevTools);
+gsap.registerPlugin(useGSAP, ScrollTrigger, SplitText);
 
 export const links: Route.LinksFunction = () => [
    { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -64,15 +61,14 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
 export default function App() {
    return (
-      <BrowserRouter basename="/Rabotnik/">
+      <>
          <Navigation />
          <Outlet />
          <Footer />
-      </BrowserRouter>
+      </>
    );
 }
 
-// TODO 1
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
    let message = "Oops!";
    let details = "An unexpected error occurred.";
