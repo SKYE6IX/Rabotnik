@@ -1,0 +1,93 @@
+.service-description {
+   width: 100%;
+   background-color: #ffffff;
+   padding: 100px 120px;
+   @media only screen and (max-width: 1200px) {
+      padding: 50px;
+   }
+   @media only screen and (max-width: 912px) {
+      padding: 50px 20px;
+   }
+   @media only screen and (min-width: 320px) and (max-width: 767px) {
+      padding: 20px;
+   }
+}
+
+.service-description__body {
+   margin-top: 50px;
+   @media only screen and (max-width: 1024px) {
+      margin-top: 30px;
+   }
+}
+
+.service-description__title {
+   font-family: "Roboto", sans-serif;
+   font-size: 3.75rem;
+   line-height: 66px;
+   font-weight: 400;
+   text-align: center;
+   color: #000;
+   @media only screen and (max-width: 1024px) {
+      font-size: 2.5rem;
+      line-height: 44px;
+   }
+   @media only screen and (min-width: 320px) and (max-width: 767px) {
+      font-size: 2rem;
+      line-height: 35.2px;
+   }
+}
+
+.service-description__title .highlight {
+   color: #f25900;
+}
+
+.service-description__subtitle-wrapper {
+   margin-top: 60px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 100px;
+
+   @media only screen and (max-width: 1024px) {
+      margin-top: 30px;
+   }
+}
+.service-description__subtitle-image {
+   @media only screen and (max-width: 1024px) {
+      max-width: 160px;
+   }
+   @media only screen and (max-width: 912px) {
+      max-width: 100px;
+   }
+}
+.service-description__subtitle-text {
+   font-family: "Roboto", sans-serif;
+   font-size: 2.5rem;
+   line-height: 48px;
+   color: #000;
+   font-weight: 400;
+   letter-spacing: -0.4px;
+   @media only screen and (max-width: 1024px) {
+      font-size: 2rem;
+      line-height: 38.4px;
+   }
+   @media only screen and (max-width: 912px) {
+      font-size: 1.75rem;
+      line-height: 33.6px;
+   }
+   @media only screen and (min-width: 320px) and (max-width: 767px) {
+      font-size: 1.5rem;
+      line-height: 28.8px;
+      text-align: end;
+   }
+}
+.service-description__subtitle-text .space {
+   width: 150px;
+   display: inline-block;
+   @media only screen and (max-width: 1024px) {
+      width: 110px;
+   }
+   @media only screen and (min-width: 320px) and (max-width: 767px) {
+      width: 50px;
+   }
+}
