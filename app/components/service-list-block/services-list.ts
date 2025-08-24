@@ -33,7 +33,7 @@ export const servicesList = [
       label: "Генерация кадрового трафика",
       image: serviceImage4,
       icon: serviceIcon4,
-      href: "#talentFlowService",
+      href: "/talent-flow",
    },
    {
       label: "Размещение в сети TG каналов Rabotnik",
