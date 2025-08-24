@@ -37,7 +37,6 @@ export function meta({}: Route.MetaArgs) {
       { name: "description", content: "Welcome to React Router!" },
    ];
 }
-
 export function Layout({ children }: { children: React.ReactNode }) {
    return (
       <html lang="ru">
