@@ -1,9 +1,7 @@
 import React, { useRef } from "react";
-import Button from "../button/Button";
 import image from "/service-description-icon.png";
-// import { gsap } from "gsap";
-// import { SplitText } from "gsap/SplitText";
-// import { useGSAP } from "@gsap/react";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
 import "./service-description.css";
 
 interface ServiceDescriptionProps {
@@ -11,23 +9,36 @@ interface ServiceDescriptionProps {
    subTitle: React.ReactNode;
 }
 function ServiceDescription({ title, subTitle }: ServiceDescriptionProps) {
-   const containerRef = useRef<HTMLDivElement>(null);
-
+   const iconContainerRef = useRef<HTMLDivElement>(null);
+   useGSAP(() => {
+      gsap.to(iconContainerRef.current, {
+         duration: 10,
+         rotate: 360,
+         ease: "none",
+         repeat: -1,
+      });
+   });
    return (
-      <section className="service-description" ref={containerRef}>
+      <section className="service-description">
+         <h3 className="service-description__title">{title}</h3>
          <div className="service-description__body">
-            <h2 className="service-description__title">{title}</h2>
-            <div className="service-description__subtitle-wrapper">
+            <div
+               className="service-description__image-wrapper"
+               ref={iconContainerRef}
+            >
                <img
-                  className="service-description__subtitle-image"
                   src={image}
-                  alt="Orange icon"
-               ></img>
-               <h5 className="service-description__subtitle-text">
-                  <span className="space"></span>
-                  {subTitle}
-               </h5>
+                  alt="An Orange cirle rotating"
+                  data-testid="service-description-icon"
+               />
             </div>
+            <h4
+               className="service-description__sub-title"
+               data-testid="service-description-sub-title"
+            >
+               <span className="space"></span>
+               {subTitle}
+            </h4>
          </div>
       </section>
    );

@@ -1,8 +1,6 @@
 import Hero from "~/components/hero/Hero";
 import ServiceDescription from "~/components/service-description/ServiceDescription";
 import ContactUs from "~/components/contact-us/ContactUs";
-import Faq from "~/components/faq/Faq";
-import TextSlider from "~/components/text-slider/TextSlider";
 import heroImage from "./hero-image.png";
 import "./talent-flow-service.css";
 
@@ -32,12 +30,11 @@ export default function talentFlowService() {
             subTitle={
                <>
                   Вам нужны не просмотры, а люди. Мы знаем, где найти даже тех,
-                  кто не ищет работу
+                  кто не ищет работу.
                </>
             }
          />
          <ContactUs />
-         <TextSlider />
       </div>
    );
 }
