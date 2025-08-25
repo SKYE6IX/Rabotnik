@@ -1,0 +1,160 @@
+.service-overview {
+   margin-top: 100px;
+   padding-bottom: 50px;
+   @media only screen and (max-width: 1024px) {
+      margin-top: 80px;
+   }
+   @media only screen and (min-width: 320px) and (max-width: 767px) {
+      margin-top: 40px;
+   }
+}
+.service-overview__list {
+   --gap: 40px;
+   display: flex;
+   flex-direction: column;
+   gap: var(--gap);
+   @media only screen and (min-width: 320px) and (max-width: 767px) {
+      --gap: 20px;
+   }
+}
+.service-overview__list-row {
+   display: flex;
+   gap: var(--gap);
+   @media only screen and (min-width: 320px) and (max-width: 767px) {
+      flex-direction: column;
+   }
+}
+.service-overview__list-item {
+   background: #fbfbfb;
+   min-height: 220px;
+   @media only screen and (min-width: 320px) and (max-width: 767px) {
+      min-height: max-content;
+   }
+}
+.service-overview__list-item.box1 {
+   flex-shrink: 0;
+   border-radius: 30px;
+   margin-left: 120px;
+   padding: 30px;
+   display: flex;
+   gap: 10px;
+   @media only screen and (max-width: 1024px) {
+      margin-left: 60px;
+   }
+   @media only screen and (min-width: 320px) and (max-width: 767px) {
+      justify-content: space-between;
+      margin-left: 20px;
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px;
+   }
+}
+.service-overview__list-item.box2 {
+   padding: 30px 120px 30px 30px;
+   border-radius: 30px 0px 0px 30px;
+   @media only screen and (max-width: 1024px) {
+      padding-right: 60px;
+   }
+   @media only screen and (min-width: 320px) and (max-width: 767px) {
+      padding-right: 20px;
+      margin-right: 20px;
+      border-radius: 0px 30px 30px 0px;
+   }
+}
+.service-overview__list-item.box3 {
+   padding: 30px 30px 30px 120px;
+   border-radius: 0px 30px 30px 0px;
+   @media only screen and (max-width: 1024px) {
+      padding-left: 60px;
+   }
+   @media only screen and (min-width: 320px) and (max-width: 767px) {
+      padding-left: 20px;
+      margin-left: 20px;
+      border-radius: 30px 0px 0px 30px;
+   }
+}
+.service-overview__list-item.box4 {
+   flex-shrink: 0;
+   padding: 30px;
+   border-radius: 30px;
+   margin-right: 120px;
+   display: flex;
+   gap: 100px;
+   background-color: #d8beff;
+   @media only screen and (max-width: 1024px) {
+      margin-right: 60px;
+   }
+   @media only screen and (min-width: 320px) and (max-width: 767px) {
+      justify-content: space-between;
+      margin-right: 20px;
+      border-top-left-radius: 0px;
+      border-bottom-left-radius: 0px;
+   }
+}
+.service-overview__list-item.box4 .service-overview__list-item-title {
+   color: #fff;
+}
+.service-overview__list-item.box4 .service-overview__list-item-link {
+   background-color: #fff;
+   svg {
+      path {
+         fill: #d8beff;
+      }
+   }
+}
+.service-overview__list-item-title {
+   max-width: 140px;
+   font-family: "Roboto", sans-serif;
+   font-size: 1.875rem;
+   font-weight: 500;
+   line-height: 33px;
+   color: #f25900;
+   @media only screen and (max-width: 1024px) {
+      font-size: 1.5rem;
+      line-height: 28.8px;
+   }
+}
+.service-overview__list-item-heading {
+   font-family: "Roboto", sans-serif;
+   font-size: 2rem;
+   line-height: 35.2px;
+   font-weight: 500;
+   color: #f25900;
+   margin-bottom: 20px;
+   @media only screen and (max-width: 1024px) {
+      font-size: 1.75rem;
+      line-height: 30.8px;
+   }
+}
+.service-overview__list-item-link {
+   width: 60px;
+   height: 60px;
+   border-radius: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: #f25900;
+   align-self: flex-end;
+   @media only screen and (max-width: 1024px) {
+      align-self: unset;
+   }
+}
+.service-overview__list-item-text,
+.service-overview__list-item-inner-list-item {
+   font-family: "Roboto", sans-serif;
+   font-size: 1.375rem;
+   line-height: 30.8px;
+   font-weight: 400;
+   color: #000;
+   @media only screen and (max-width: 1024px) {
+      font-size: 1rem;
+      line-height: 19.2px;
+   }
+}
+.service-overview__list-item-inner-list {
+   list-style: none;
+}
+.service-overview__list-item-inner-list-item {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+}
