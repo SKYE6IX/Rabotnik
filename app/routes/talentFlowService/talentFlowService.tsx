@@ -1,5 +1,6 @@
 import Hero from "~/components/hero/Hero";
 import ServiceDescription from "~/components/service-description/ServiceDescription";
+import RecruitmentFunnelOffer from "~/components/recruitment-funnel-offer/RecruitmentFunnelOffer";
 import ContactUs from "~/components/contact-us/ContactUs";
 import heroImage from "./hero-image.png";
 import "./talent-flow-service.css";
@@ -34,6 +35,7 @@ export default function talentFlowService() {
                </>
             }
          />
+         <RecruitmentFunnelOffer />
          <ContactUs />
       </div>
    );
