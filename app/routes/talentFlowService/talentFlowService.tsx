@@ -4,6 +4,7 @@ import RecruitmentFunnelOffer from "~/components/recruitment-funnel-offer/Recrui
 import ServiceOverview from "~/components/service-overview/ServiceOverview";
 import ContactUs from "~/components/contact-us/ContactUs";
 import heroImage from "./hero-image.png";
+import ChannelOverview from "~/components/channel-overview/ChannelOverview";
 import "./talent-flow-service.css";
 
 const recruitmentFunnelList = [
@@ -11,6 +12,14 @@ const recruitmentFunnelList = [
    "Экономию времени рекрутера",
    "Гибкий подход: тестируем, масштабируем, оптимизируем",
    "Вы платите только за валидных кандидатов",
+];
+const channelOverviewList = [
+   "Реклама в транспорте, баннеры, offline-носители",
+   "SMS и голосовые рассылки",
+   "Таргетированная реклама (ВКонтакте, myTarget, Telegram Ads)",
+   "Прямые интеграции с HRM-платформами",
+   "Контекстная реклама (Яндекс.Директ, Google Ads при необходимости)",
+   "Чат-боты и автообзвон",
 ];
 
 export default function talentFlowService() {
@@ -58,6 +67,10 @@ export default function talentFlowService() {
             boxTwoTitle="Что такое генерация кадрового трафика?"
             boxTwoText="Это не просто реклама вакансии. Это система привлечения кандидатов по заданным критериям через digital-каналы, автоматизацию и обработку откликов"
             boxThreeText="Мы настраиваем поток валидных лидов с максимальным охватом и персонализацией под специфику вашего бизнеса"
+         />
+         <ChannelOverview
+            title="Используемые каналы:"
+            list={channelOverviewList}
          />
          <ContactUs />
       </div>
