@@ -2,9 +2,10 @@ import Hero from "~/components/hero/Hero";
 import ServiceDescription from "~/components/service-description/ServiceDescription";
 import RecruitmentFunnelOffer from "~/components/recruitment-funnel-offer/RecruitmentFunnelOffer";
 import ServiceOverview from "~/components/service-overview/ServiceOverview";
+import ChannelOverview from "~/components/channel-overview/ChannelOverview";
+import WorkStage from "~/components/work-stage/WorkStage";
 import ContactUs from "~/components/contact-us/ContactUs";
 import heroImage from "./hero-image.png";
-import ChannelOverview from "~/components/channel-overview/ChannelOverview";
 import "./talent-flow-service.css";
 
 const recruitmentFunnelList = [
@@ -20,6 +21,15 @@ const channelOverviewList = [
    "Прямые интеграции с HRM-платформами",
    "Контекстная реклама (Яндекс.Директ, Google Ads при необходимости)",
    "Чат-боты и автообзвон",
+];
+
+const workStages = [
+   "Анализ вакансии, аудит ЦА",
+   "Структура и UX (воронка конверсии)",
+   "Копирайтинг, оформление УТП",
+   "Дизайн + адаптив",
+   "Верстка, настройка аналитики и форм",
+   "Интеграция с рекламой и CRM/HRM",
 ];
 
 export default function talentFlowService() {
@@ -72,6 +82,7 @@ export default function talentFlowService() {
             title="Используемые каналы:"
             list={channelOverviewList}
          />
+         <WorkStage list={workStages} />
          <ContactUs />
       </div>
    );
