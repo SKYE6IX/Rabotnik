@@ -4,8 +4,11 @@ import RecruitmentFunnelOffer from "~/components/recruitment-funnel-offer/Recrui
 import ServiceOverview from "~/components/service-overview/ServiceOverview";
 import ChannelOverview from "~/components/channel-overview/ChannelOverview";
 import WorkStage from "~/components/work-stage/WorkStage";
+import HowWeWork from "~/components/how-we-work/HowWeWork";
+import PerformanceMetrics from "~/components/performance-metrics/PerformanceMetrics";
 import ContactUs from "~/components/contact-us/ContactUs";
 import heroImage from "./hero-image.png";
+import howWeWorkImage from "./how-we-work.png";
 import "./talent-flow-service.css";
 
 const recruitmentFunnelList = [
@@ -22,7 +25,6 @@ const channelOverviewList = [
    "Контекстная реклама (Яндекс.Директ, Google Ads при необходимости)",
    "Чат-боты и автообзвон",
 ];
-
 const workStages = [
    "Анализ вакансии, аудит ЦА",
    "Структура и UX (воронка конверсии)",
@@ -83,6 +85,64 @@ export default function talentFlowService() {
             list={channelOverviewList}
          />
          <WorkStage list={workStages} />
+         <HowWeWork
+            sectionImage={howWeWorkImage}
+            sectionHeading="Для кого подходит услуга"
+            sectionSubHeading="Где наш подход работает лучше всего?"
+            sectionList={[
+               "Массовый подбор: логистика, ритейл, производство, склады",
+               "Региональные и вахтовые вакансии",
+               "Высокая текучесть и дефицитные позиции",
+               "Низкая эффективность с Avito, HH и др.",
+               "Нужен результат, а не «много просмотров»",
+            ]}
+            sectionBottom={{
+               heading: "Там, где сложно — приходим мы!",
+               text: "Массовый подбор, регионы, текучка. Ищем не просмотры, а людей.",
+            }}
+         />
+         <PerformanceMetrics
+            sectionTitle={
+               <>
+                  Наши <span className="highlight">кейсы</span>
+               </>
+            }
+            metrics={[
+               {
+                  label: "Складские рабочие",
+                  value: {
+                     initial: "100",
+                     countBy: "50",
+                     countEnd: "1200",
+                     suffix: "+",
+                  },
+                  description:
+                     "За 3 недели закрыли 1200 позиций в 4 регионах для логистической сети. Массовый подбор с высокой точностью",
+               },
+               {
+                  label: "Водители вахтой",
+                  value: {
+                     initial: "100",
+                     countBy: "10",
+                     countEnd: "500",
+                     suffix: "+",
+                  },
+                  description:
+                     "Подобрали более 500 вахтовых водителей за 45 дней. Применили мультиканальный подход и гео-таргетинг",
+               },
+               {
+                  label: "Ритейл",
+                  value: {
+                     initial: "10",
+                     countBy: "5",
+                     countEnd: "85",
+                     suffix: "%",
+                  },
+                  description:
+                     "Достигли 85% релевантных откликов при массовом подборе в федеральную сеть ритейла — без «мусорного трафика»",
+               },
+            ]}
+         />
          <ContactUs />
       </div>
    );
