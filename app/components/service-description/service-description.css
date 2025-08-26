@@ -60,7 +60,8 @@
       display: none;
    }
 }
-.service-description__title .highlight {
+.service-description__title .highlight,
+.service-description__sub-title .highlight {
    color: #f25900;
 }
 .service-description__sub-title {

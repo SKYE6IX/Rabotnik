@@ -4,12 +4,36 @@ import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import Faq from "../Faq";
 
+const mockList = [
+   {
+      question: "Сколько стоит?",
+      answer: {
+         text: "От 15 000 ₽ — зависит от сложности, дизайна, наличия интеграций. Точная смета — после брифа.",
+         hasList: false,
+      },
+   },
+   {
+      question: "Вы хостите сайт или отдаёте на стороне?",
+      answer: {
+         text: "Мы можем как передать готовый код, так и разместить на нашей защищённой платформе.",
+         hasList: false,
+      },
+   },
+   {
+      question: "Сколько длится разработка?",
+      answer: {
+         text: "Обычно от 3 до 7 рабочих дней.",
+         hasList: false,
+      },
+   },
+];
+
 describe("Faq Component", () => {
    test("renders FAQ section with title", () => {
       // Arrange
       render(
          <MemoryRouter>
-            <Faq />
+            <Faq faqList={mockList} />
          </MemoryRouter>
       );
       // Act
@@ -22,7 +46,7 @@ describe("Faq Component", () => {
       // Arrange
       render(
          <MemoryRouter>
-            <Faq />
+            <Faq faqList={mockList} />
          </MemoryRouter>
       );
       // Act
@@ -40,7 +64,7 @@ describe("Faq Component", () => {
       const user = userEvent.setup();
       render(
          <MemoryRouter>
-            <Faq />
+            <Faq faqList={mockList} />
          </MemoryRouter>
       );
 

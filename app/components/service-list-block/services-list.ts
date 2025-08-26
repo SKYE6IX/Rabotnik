@@ -15,19 +15,19 @@ export const servicesList = [
       label: "Создание посадочных страниц и сайтов",
       image: serviceImage1,
       icon: serviceIcon1,
-      href: "#",
+      href: "/landing-service",
    },
    {
       label: "Разработка креативных концепций и рекламных материалов",
       image: serviceImage2,
       icon: "",
-      href: "#",
+      href: "/creative-ads",
    },
    {
       label: "Ведение рекламных кампаний",
       image: serviceImage3,
       icon: serviceIcon3,
-      href: "#",
+      href: "ad-management",
    },
    {
       label: "Генерация кадрового трафика",
@@ -39,12 +39,12 @@ export const servicesList = [
       label: "Размещение в сети TG каналов Rabotnik",
       image: serviceImage5,
       icon: serviceIcon5,
-      href: "#",
+      href: "/tg-network",
    },
    {
       label: "Обработка лидов через call-центр (ресечинг)",
       image: serviceImage6,
       icon: serviceIcon6,
-      href: "#",
+      href: "/lead-processing",
    },
 ];

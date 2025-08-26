@@ -1,8 +1,19 @@
 import React, { useState } from "react";
-import { faqList } from "./faqList.";
 import "./faq.css";
+interface FaqProps {
+   faqList: {
+      question: string;
+      answer: {
+         title?: string;
+         text?: string;
+         hasList: boolean;
+         bottomText?: string;
+         list?: string[];
+      };
+   }[];
+}
 
-function Faq() {
+function Faq({ faqList }: FaqProps) {
    const [isExpandIdx, setIsExpandIdx] = useState<number | null>(null);
    const toggleExpand = (newIdx: number) => {
       setIsExpandIdx((prev) => (prev === newIdx ? null : newIdx));

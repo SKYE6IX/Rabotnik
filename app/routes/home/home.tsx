@@ -9,6 +9,7 @@ import Faq from "~/components/faq/Faq";
 import TextSlider from "~/components/text-slider/TextSlider";
 import heroImage from "./hero-image.jpg";
 import howWeWorkImage from "./how-we-work.jpg";
+import { faqList } from "./faqList.";
 import "./home.css";
 
 export default function Home() {
@@ -47,7 +48,7 @@ export default function Home() {
             <AboutUs />
          </div>
          <ContactUs />
-         <Faq />
+         <Faq faqList={faqList} />
          <TextSlider />
       </div>
    );
