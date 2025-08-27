@@ -4,4 +4,8 @@ export default [
    index("routes/home/home.tsx"),
    route("talent-flow", "routes/talentFlowService/talentFlowService.tsx"),
    route("landing-service", "routes/landingService/landingService.tsx"),
+   route(
+      "lead-processing",
+      "routes/leadProcessingService/leadProcessingService.tsx"
+   ),
 ] satisfies RouteConfig;
