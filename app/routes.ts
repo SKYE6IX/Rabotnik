@@ -8,4 +8,5 @@ export default [
       "lead-processing",
       "routes/leadProcessingService/leadProcessingService.tsx"
    ),
+   route("creative-ads", "./routes/creativeAdsService/creativeAdsService.tsx"),
 ] satisfies RouteConfig;

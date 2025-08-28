@@ -1,0 +1,25 @@
+.creative-ads-service {
+   /* Overide some style of each components */
+   /* Relative to the original styles applied on each component */
+   .hero__title-wrapper {
+      padding-bottom: 100px;
+      @media only screen and (min-width: 320px) and (max-width: 767px) {
+         padding-bottom: 20px;
+      }
+   }
+   .hero__sub-title-wrapper {
+      top: 70%;
+      @media only screen and (max-width: 912px) {
+         top: 60%;
+      }
+   }
+   .hero__sub-title {
+      @media only screen and (max-width: 912px) {
+         max-width: 350px;
+      }
+      @media only screen and (min-width: 320px) and (max-width: 767px) {
+         /* font-weight: 300; */
+         max-width: 160px;
+      }
+   }
+}

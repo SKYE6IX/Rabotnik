@@ -62,7 +62,7 @@
       /* padding-bottom: 90px; */
    }
    @media only screen and (min-width: 320px) and (max-width: 767px) {
-      padding-right: 30px;
+      padding-right: 10px;
       /* Extra spacing isn't need anymore on mobile so I set back to default*/
       padding-bottom: 20px;
    }

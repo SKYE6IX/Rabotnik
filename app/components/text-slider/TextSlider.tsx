@@ -47,6 +47,7 @@ function TextSlider() {
                },
                repeat: -1,
             });
+
             tween2 = gsap.to(".text-slider__slide-text.right", {
                duration: 10,
                ease: "none",
