@@ -73,7 +73,7 @@ function ServiceListBlock() {
    );
 
    return (
-      <section className="service-list-block" ref={containerRef}>
+      <section className="service-list-block" ref={containerRef} id="services">
          <h3 className="service-list-block__title">
             <span>
                <svg

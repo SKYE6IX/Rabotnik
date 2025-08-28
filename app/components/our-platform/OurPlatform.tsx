@@ -76,7 +76,7 @@ function OurPlatform() {
       { scope: containerRef }
    );
    return (
-      <section className="our-platform" ref={containerRef}>
+      <section className="our-platform" ref={containerRef} id="platform">
          <h3 className="our-platform__title">
             <span>
                <svg

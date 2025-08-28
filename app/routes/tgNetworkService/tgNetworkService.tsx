@@ -6,6 +6,7 @@ import ServiceOverview from "~/components/service-overview/ServiceOverview";
 import HowWeWork from "~/components/how-we-work/HowWeWork";
 import PerformanceMetrics from "~/components/performance-metrics/PerformanceMetrics";
 import TelegramChannels from "~/components/telegram-channels/TelegramChannels";
+import ContactUs from "~/components/contact-us/ContactUs";
 import heroImage from "./hero-image.jpg";
 import howWeWorkImage from "./how-we-work.jpg";
 import howWeWork2Image from "./how-we-work2.jpg";
@@ -153,6 +154,7 @@ function tgNetworkService() {
             ]}
          />
          <TelegramChannels />
+         <ContactUs />
       </div>
    );
 }

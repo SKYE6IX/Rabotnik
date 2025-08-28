@@ -3,7 +3,7 @@ import serviceImage2 from "/services-list/service-2.jpg";
 import serviceImage3 from "/services-list/service-3.jpg";
 import serviceImage4 from "/services-list/service-4.png";
 import serviceImage5 from "/services-list/service-5.jpg";
-import serviceImage6 from "/services-list/service-5.jpg";
+import serviceImage6 from "/services-list/service-6.jpg";
 import serviceIcon1 from "/services-list/service-1-icon.png";
 import serviceIcon3 from "/services-list/service-3-icon.png";
 import serviceIcon4 from "/services-list/service-4-icon.png";
