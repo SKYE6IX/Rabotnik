@@ -6,8 +6,11 @@ import CreativeSlider from "~/components/creativeSlider/CreativeSlider";
 import ChannelOverview from "~/components/channel-overview/ChannelOverview";
 import WorkStage from "~/components/work-stage/WorkStage";
 import HowWeWork from "~/components/how-we-work/HowWeWork";
+import ContactUs from "~/components/contact-us/ContactUs";
+import Faq from "~/components/faq/Faq";
 import heroImage from "./hero-image.jpg";
 import howWeWorkImage from "./how-we-work.jpg";
+import { faqList } from "./faqList.";
 import "./creative-ads.css";
 
 function creativeAdsService() {
@@ -111,6 +114,8 @@ function creativeAdsService() {
                к действию
             </p>
          </section>
+         <ContactUs />
+         <Faq faqList={faqList} />
       </div>
    );
 }
