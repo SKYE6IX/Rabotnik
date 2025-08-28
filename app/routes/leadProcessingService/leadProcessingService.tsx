@@ -52,7 +52,9 @@ function leadProcessingService() {
          />
          <HowWeWork
             sectionImage={howWeWorkImage}
-            sectionHeading="Зачем нужен ресечинг?"
+            sectionHeading={
+               <span className="highlight">Зачем нужен ресечинг?</span>
+            }
             sectionSubHeading="Где наш подход работает лучше всего?"
             sectionList={[
                "Снижает количество нецелевых откликов в HR",

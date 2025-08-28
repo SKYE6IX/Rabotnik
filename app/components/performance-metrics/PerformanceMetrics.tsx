@@ -5,7 +5,11 @@ import "./performance-metric.css";
 
 const formatNumber = (num: string, suffix?: string) => {
    const value = num.toString();
-   return value.replace(/,/g, "") + suffix;
+   if (value.length >= 4) {
+      return value.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1 ") + suffix;
+   } else {
+      return value.replace(/,/g, "") + suffix;
+   }
 };
 interface PerformanceMetricsProps {
    sectionTitle: React.ReactNode;

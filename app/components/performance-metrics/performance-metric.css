@@ -42,7 +42,9 @@
    }
 }
 .performance-metrics__list {
+   width: 100%;
    display: flex;
+   justify-content: space-between;
    gap: 50px;
    @media only screen and (max-width: 1024px) {
       gap: 40px;

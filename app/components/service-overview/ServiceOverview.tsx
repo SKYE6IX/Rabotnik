@@ -10,6 +10,9 @@ interface ServiceOverviewProps {
    boxThreeTitle?: string;
    boxThreeText?: string;
    boxThreeList?: string[];
+   boxFourTitle?: string;
+   hrefBox1?: string;
+   hrefBox4?: string;
 }
 
 function ServiceOverview({
@@ -20,6 +23,9 @@ function ServiceOverview({
    boxThreeTitle,
    boxThreeText,
    boxThreeList,
+   boxFourTitle,
+   hrefBox1,
+   hrefBox4,
 }: ServiceOverviewProps) {
    return (
       <section className="service-overview">
@@ -29,7 +35,10 @@ function ServiceOverview({
                   <h3 className="service-overview__list-item-title">
                      {boxOneTitle || "Примеры кейсов"}
                   </h3>
-                  <Link to="#" className="service-overview__list-item-link">
+                  <Link
+                     to={hrefBox1 || "#"}
+                     className="service-overview__list-item-link"
+                  >
                      <svg
                         width="14"
                         height="14"
@@ -122,9 +131,12 @@ function ServiceOverview({
                </div>
                <div className="service-overview__list-item box4">
                   <h3 className="service-overview__list-item-title">
-                     Этапы работы
+                     {boxFourTitle || "Этапы работы"}
                   </h3>
-                  <Link to="#" className="service-overview__list-item-link">
+                  <Link
+                     to={hrefBox4 || "#"}
+                     className="service-overview__list-item-link"
+                  >
                      <svg
                         width="14"
                         height="14"

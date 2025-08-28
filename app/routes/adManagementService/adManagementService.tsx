@@ -59,7 +59,12 @@ function adManagementService() {
          />
          <HowWeWork
             sectionImage={howWeWorkImage}
-            sectionHeading="Контекстная реклама с результатом"
+            sectionHeading={
+               <>
+                  Контекстная реклама{" "}
+                  <span className="highlight">с результатом</span>
+               </>
+            }
             sectionParagraph={
                <>
                   <span>
@@ -105,7 +110,11 @@ function adManagementService() {
          />
          <HowWeWork
             sectionImage={howWeWork2Image}
-            sectionHeading="Для кого подходит услуга"
+            sectionHeading={
+               <>
+                  <span className="highlight">Для кого </span>подходит услуга
+               </>
+            }
             sectionSubHeading="Где наш подход работает лучше всего?"
             sectionList={[
                "Массовый найм в регионах",

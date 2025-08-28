@@ -13,4 +13,5 @@ export default [
       "ad-management",
       "./routes/adManagementService/adManagementService.tsx"
    ),
+   route("tg-network", "./routes/tgNetworkService/tgNetworkService.tsx"),
 ] satisfies RouteConfig;

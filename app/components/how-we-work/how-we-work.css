@@ -84,6 +84,7 @@
    }
 }
 .how-we-work__text-title {
+   max-width: 600px;
    margin-bottom: 20px;
    font-family: "Roboto", sans-serif;
    font-size: 2.5rem;
@@ -95,6 +96,9 @@
       font-size: 1.75rem;
       line-height: 30.8px;
    }
+}
+.how-we-work__text-title .highlight {
+   color: #d8beff;
 }
 .how-we-work__text-sub-title {
    margin-bottom: 30px;
@@ -131,7 +135,7 @@
 .how-we-work__paragraph {
    display: flex;
    flex-direction: column;
-   max-width: 500px;
+   max-width: 700px;
    font-size: 1.25rem;
    line-height: 28px;
 }

@@ -87,7 +87,9 @@ function creativeAdsService() {
          />
          <HowWeWork
             sectionImage={howWeWorkImage}
-            sectionHeading="Почему это важно?"
+            sectionHeading={
+               <span className="highlight">Почему это важно?</span>
+            }
             sectionSubHeading="Где наш подход работает лучше всего?"
             sectionList={[
                "Кандидаты не читают — они смотрят",

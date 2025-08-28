@@ -87,7 +87,11 @@ export default function talentFlowService() {
          <WorkStage list={workStages} />
          <HowWeWork
             sectionImage={howWeWorkImage}
-            sectionHeading="Для кого подходит услуга"
+            sectionHeading={
+               <>
+                  <span className="highlight">Для кого </span>подходит услуга
+               </>
+            }
             sectionSubHeading="Где наш подход работает лучше всего?"
             sectionList={[
                "Массовый подбор: логистика, ритейл, производство, склады",

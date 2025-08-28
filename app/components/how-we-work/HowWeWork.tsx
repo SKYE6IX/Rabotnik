@@ -7,7 +7,7 @@ import "./how-we-work.css";
 interface HowWeWorkProps {
    sectionImage: string;
    sectionTitle?: string;
-   sectionHeading: string;
+   sectionHeading: React.ReactNode;
    sectionSubHeading?: string;
    sectionList?: string[];
    sectionParagraph?: React.ReactNode;
