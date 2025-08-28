@@ -8,9 +8,9 @@ interface HowWeWorkProps {
    sectionImage: string;
    sectionTitle?: string;
    sectionHeading: string;
-   sectionSubHeading: string;
+   sectionSubHeading?: string;
    sectionList?: string[];
-   sectionParagraph?: string;
+   sectionParagraph?: React.ReactNode;
    sectionBottom?: { heading: string; text: string };
 }
 function HowWeWork({
@@ -77,9 +77,14 @@ function HowWeWork({
             </div>
             <div className="how-we-work__text-wrapper">
                <h4 className="how-we-work__text-title">{sectionHeading}</h4>
-               <h5 className="how-we-work__text-sub-title">
-                  {sectionSubHeading}
-               </h5>
+               {sectionSubHeading && (
+                  <h5 className="how-we-work__text-sub-title">
+                     {sectionSubHeading}
+                  </h5>
+               )}
+               {sectionParagraph && (
+                  <p className="how-we-work__paragraph">{sectionParagraph}</p>
+               )}
                {sectionList && (
                   <ul className="how-we-work__text-list">
                      {sectionList.map((list) => (

@@ -114,7 +114,8 @@
    flex-direction: column;
    gap: 20px;
 }
-.how-we-work__text-list-item {
+.how-we-work__text-list-item,
+.how-we-work__paragraph {
    display: inline-flex;
    align-items: flex-start;
    gap: 10px;
@@ -126,6 +127,13 @@
    svg {
       flex-shrink: 0;
    }
+}
+.how-we-work__paragraph {
+   display: flex;
+   flex-direction: column;
+   max-width: 500px;
+   font-size: 1.25rem;
+   line-height: 28px;
 }
 .how-we-work__bottom {
    align-self: start;

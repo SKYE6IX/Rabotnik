@@ -9,4 +9,8 @@ export default [
       "routes/leadProcessingService/leadProcessingService.tsx"
    ),
    route("creative-ads", "./routes/creativeAdsService/creativeAdsService.tsx"),
+   route(
+      "ad-management",
+      "./routes/adManagementService/adManagementService.tsx"
+   ),
 ] satisfies RouteConfig;
