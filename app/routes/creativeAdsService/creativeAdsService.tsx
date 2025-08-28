@@ -3,7 +3,11 @@ import Hero from "~/components/hero/Hero";
 import ServiceDescription from "~/components/service-description/ServiceDescription";
 import RecruitmentFunnelOffer from "~/components/recruitment-funnel-offer/RecruitmentFunnelOffer";
 import CreativeSlider from "~/components/creativeSlider/CreativeSlider";
+import ChannelOverview from "~/components/channel-overview/ChannelOverview";
+import WorkStage from "~/components/work-stage/WorkStage";
+import HowWeWork from "~/components/how-we-work/HowWeWork";
 import heroImage from "./hero-image.jpg";
+import howWeWorkImage from "./how-we-work.jpg";
 import "./creative-ads.css";
 
 function creativeAdsService() {
@@ -57,6 +61,56 @@ function creativeAdsService() {
             ]}
          />
          <CreativeSlider />
+         <ChannelOverview
+            title="Что входит в услугу:"
+            list={[
+               "Креативная концепция",
+               "Дизайн баннеров для соцсетей и таргета",
+               " Адаптации под форматы: сторис, лендинг, баннеры, офлайн",
+               "Тексты под рекламу: кратко, по делу, с УТП",
+               "Сценарии и монтаж видео-объявлений",
+               "Офлайн-носители: листовки, постеры, транспорт, ТВ",
+            ]}
+         />
+         <WorkStage
+            list={[
+               "Анализ вакансии, аудитории и каналов",
+               "Генерация идей",
+               "Разработка визуальных и текстовых решений",
+               "Адаптация под форматы / платформы",
+               "Согласование и передача готовых материалов",
+               "Тестируем гипотезы",
+            ]}
+         />
+         <HowWeWork
+            sectionImage={howWeWorkImage}
+            sectionHeading="Почему это важно?"
+            sectionSubHeading="Где наш подход работает лучше всего?"
+            sectionList={[
+               "Кандидаты не читают — они смотрят",
+               "Выделиться среди конкурентов → больше внимания",
+               "Правильный визуал + сообщение → выше конверсия",
+               "Один креатив — разные платформы (VK, Telegram, YouTube, Авито и др.)",
+            ]}
+            sectionBottom={{
+               heading: "Заставим кандидата сказать «Хочу у вас работать!»",
+               text: "От идеи до отклика — каждая деталь нацелена на конверсию",
+            }}
+         />
+         <section className="creative-ads-service__benefit-text-wrapper">
+            <h3 className="creative-ads-service__benefit-heading">
+               Правильный креатив =
+               <span className="highlight"> эффективная реклама</span>
+            </h3>
+            <p className="creative-ads-service__benefit-text">
+               <span className="space"></span>
+               Мы создаём материалы, которые{" "}
+               <span className="highlight">
+                  цепляют, объясняют и побуждают
+               </span>{" "}
+               к действию
+            </p>
+         </section>
       </div>
    );
 }

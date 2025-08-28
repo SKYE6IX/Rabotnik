@@ -22,4 +22,74 @@
          max-width: 160px;
       }
    }
+
+   /* Non overide component styles */
+   .creative-ads-service__benefit-text-wrapper {
+      margin-top: 100px;
+      padding-left: 120px;
+      padding-right: 120px;
+      padding-bottom: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 100px;
+      @media only screen and (max-width: 1024px) {
+         margin-top: 80px;
+         padding-left: 60px;
+         padding-right: 60px;
+         gap: 70px;
+      }
+      @media only screen and (min-width: 320px) and (max-width: 767px) {
+         margin-top: 40px;
+         padding-left: 20px;
+         padding-right: 20px;
+         gap: 40px;
+      }
+   }
+   .creative-ads-service__benefit-heading {
+      font-family: "Roboto", sans-serif;
+      font-size: 3.75rem;
+      line-height: 66px;
+      color: #000;
+      font-weight: 400;
+      max-width: 659px;
+      text-align: center;
+      @media only screen and (max-width: 1024px) {
+         font-size: 3rem;
+         line-height: 52.8px;
+      }
+      @media only screen and (min-width: 320px) and (max-width: 767px) {
+         font-size: 2rem;
+         line-height: 35.2px;
+         width: 100%;
+      }
+   }
+   .creative-ads-service__benefit-heading .highlight,
+   .creative-ads-service__benefit-text .highlight {
+      color: #f25900;
+   }
+   .creative-ads-service__benefit-text {
+      align-self: flex-end;
+      font-family: "Roboto", sans-serif;
+      font-size: 2.5rem;
+      line-height: 56px;
+      color: #000;
+      font-weight: 400;
+      max-width: 880px;
+      text-align: end;
+      @media only screen and (max-width: 1024px) {
+         font-size: 2rem;
+         line-height: 44.8px;
+      }
+      @media only screen and (min-width: 320px) and (max-width: 767px) {
+         font-size: 1.5rem;
+         line-height: 33.6px;
+         width: 100%;
+      }
+   }
+   .creative-ads-service__benefit-text .space {
+      width: 100px;
+      display: inline-block;
+   }
 }
