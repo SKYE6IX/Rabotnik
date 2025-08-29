@@ -7,12 +7,14 @@ interface ButtonProps {
    color: "orange" | "purple" | "black";
    type: "link" | "submit";
    href?: string;
+   onClick?: () => void;
 }
-function Button({ label, color, type, href }: ButtonProps) {
+function Button({ label, color, type, href, onClick }: ButtonProps) {
    return (
       <button
          className={["botton", color].join(" ")}
          type={type === "submit" ? type : "button"}
+         onClick={onClick}
       >
          {type === "submit" ? (
             <div className="botton__submit">

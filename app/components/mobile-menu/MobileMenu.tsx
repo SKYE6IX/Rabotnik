@@ -65,6 +65,7 @@ function MobileMenu({
                label="Связаться"
                type="link"
                href="/contact"
+               onClick={toggleMenu}
             />
          </div>
       </div>
