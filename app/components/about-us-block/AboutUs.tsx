@@ -75,10 +75,14 @@ function AboutUs() {
                repeat: -1,
             });
          };
-
          runAnimation();
+
+         let lastWidth = 0;
          const handleResize = () => {
-            runAnimation();
+            if (window.innerWidth !== lastWidth) {
+               lastWidth = window.innerWidth;
+               runAnimation();
+            }
          };
          window.addEventListener("resize", handleResize);
          return () => window.removeEventListener("resize", handleResize);

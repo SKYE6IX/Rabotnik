@@ -11,6 +11,11 @@ import Faq from "~/components/faq/Faq";
 import heroImage from "./hero-image.jpg";
 import howWeWorkImage from "./how-we-work.jpg";
 import { faqList } from "./faqList.";
+import type { Route } from "./+types/landingService";
+
+export const links: Route.LinksFunction = () => [
+   { rel: "preload", href: heroImage, as: "image" },
+];
 
 function landingService() {
    return (

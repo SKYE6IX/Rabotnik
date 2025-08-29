@@ -11,6 +11,11 @@ import heroImage from "./hero-image.jpg";
 import howWeWorkImage from "./how-we-work.jpg";
 import { faqList } from "./faqList.";
 import "./home.css";
+import type { Route } from "./+types/home";
+
+export const links: Route.LinksFunction = () => [
+   { rel: "preload", href: heroImage, as: "image" },
+];
 
 export default function Home() {
    return (

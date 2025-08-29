@@ -10,6 +10,11 @@ import WorkFormat from "~/components/work-format/WorkFormat";
 import ContactUs from "~/components/contact-us/ContactUs";
 import heroImage from "./hero-image.jpg";
 import howWeWorkImage from "./how-we-work.jpg";
+import type { Route } from "./+types/leadProcessingService";
+
+export const links: Route.LinksFunction = () => [
+   { rel: "preload", href: heroImage, as: "image" },
+];
 
 function leadProcessingService() {
    return (
@@ -17,7 +22,7 @@ function leadProcessingService() {
          <Hero
             image={heroImage}
             showMetrics={false}
-            subTitle="Ваша команда не успевает прозванивать анкеты кандидатов? Мы сделаем это за вас — быстро, профессионально, с результатом."
+            subTitle="Прозвон анкет — быстро и профессионально"
          >
             <h1 className="hero__title">
                Обработка лидов

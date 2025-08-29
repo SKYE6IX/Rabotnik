@@ -12,6 +12,11 @@ import { faqList } from "./faqList.";
 import heroImage from "./hero-image.jpg";
 import howWeWorkImage from "./how-we-work.jpg";
 import howWeWork2Image from "./how-we-work2.jpg";
+import type { Route } from "./+types/adManagementService";
+
+export const links: Route.LinksFunction = () => [
+   { rel: "preload", href: heroImage, as: "image" },
+];
 
 function adManagementService() {
    return (

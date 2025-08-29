@@ -10,6 +10,11 @@ import ContactUs from "~/components/contact-us/ContactUs";
 import heroImage from "./hero-image.png";
 import howWeWorkImage from "./how-we-work.png";
 import "./talent-flow-service.css";
+import type { Route } from "./+types/talentFlowService";
+
+export const links: Route.LinksFunction = () => [
+   { rel: "preload", href: heroImage, as: "image" },
+];
 
 const recruitmentFunnelList = [
    "Релевантные лиды по согласованным критериям",

@@ -12,6 +12,11 @@ import heroImage from "./hero-image.jpg";
 import howWeWorkImage from "./how-we-work.jpg";
 import { faqList } from "./faqList.";
 import "./creative-ads.css";
+import type { Route } from "./+types/creativeAdsService";
+
+export const links: Route.LinksFunction = () => [
+   { rel: "preload", href: heroImage, as: "image" },
+];
 
 function creativeAdsService() {
    return (

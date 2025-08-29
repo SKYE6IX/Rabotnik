@@ -10,6 +10,11 @@ import ContactUs from "~/components/contact-us/ContactUs";
 import heroImage from "./hero-image.jpg";
 import howWeWorkImage from "./how-we-work.jpg";
 import howWeWork2Image from "./how-we-work2.jpg";
+import type { Route } from "./+types/tgNetworkService";
+
+export const links: Route.LinksFunction = () => [
+   { rel: "preload", href: heroImage, as: "image" },
+];
 
 function tgNetworkService() {
    return (

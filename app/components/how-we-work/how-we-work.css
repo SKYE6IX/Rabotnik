@@ -145,7 +145,7 @@
    background-color: #d8beff;
    border-radius: 30px;
    position: relative;
-   width: 100%;
+   width: calc(100% - 1px);
    padding: 30px;
    /* To accomodate the button shapes position, I add additional enough space for the button (40px)*/
    padding-bottom: 70px;
@@ -191,7 +191,7 @@
    position: absolute;
    background-color: #ffffff;
    right: 0px;
-   bottom: 0px;
+   bottom: -0.5px;
    border-top-left-radius: 30px;
 }
 .how-we-work__bottom-shape-wrapper {
@@ -203,10 +203,10 @@
    position: absolute;
 }
 .how-we-work__bottom-shape.left {
-   left: -30px;
+   left: -29px;
    bottom: 0px;
 }
 .how-we-work__bottom-shape.right {
    right: 0px;
-   top: -30px;
+   top: -29px;
 }
