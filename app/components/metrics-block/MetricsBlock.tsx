@@ -124,7 +124,7 @@ function MetricsBlock() {
                         className="metrics-block__item-label"
                         data-testid="metric-label"
                      >
-                        лклиентов
+                        клиентов
                      </span>
                   </div>
                </div>
