@@ -8,9 +8,9 @@ import logo from "/rabotnik-logo.webp";
 import "./navigation.css";
 
 const navigationsList = [
-   { name: "Услуги", href: "#services" },
-   { name: "Наша платформа", href: "#platform" },
-   { name: "О нас", href: "#about-us" },
+   { name: "Услуги", href: "/#services" },
+   { name: "Наша платформа", href: "/#platform" },
+   { name: "О нас", href: "/#about-us" },
    { name: "Блог", href: "#" },
 ];
 

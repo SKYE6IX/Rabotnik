@@ -6,9 +6,9 @@ import "./footer.css";
 
 function Footer() {
    const navLinks = [
-      { name: "Услуги", href: "#services" },
-      { name: "О нас", href: "#about" },
-      { name: "Платформаи", href: "#platform" },
+      { name: "Услуги", href: "/#services" },
+      { name: "О нас", href: "/#about" },
+      { name: "Платформаи", href: "/#platform" },
       { name: "Блог", href: "#" },
       { name: "Связаться", href: "#" },
    ];
