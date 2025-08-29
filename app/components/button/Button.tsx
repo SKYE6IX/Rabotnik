@@ -14,7 +14,6 @@ function Button({ label, color, type, href, onClick }: ButtonProps) {
       <button
          className={["botton", color].join(" ")}
          type={type === "submit" ? type : "button"}
-         onClick={onClick}
       >
          {type === "submit" ? (
             <div className="botton__submit">
@@ -68,7 +67,11 @@ function Button({ label, color, type, href, onClick }: ButtonProps) {
                </svg>
             </div>
          ) : (
-            <Link to={href ? href : "#"} className="botton__link">
+            <Link
+               to={href ? href : "#"}
+               className="botton__link"
+               onClick={onClick}
+            >
                <span className="button__text" data-testid="button-text">
                   {label}
                </span>
