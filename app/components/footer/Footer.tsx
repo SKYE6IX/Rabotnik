@@ -6,9 +6,9 @@ import "./footer.css";
 
 function Footer() {
    const navLinks = [
-      { name: "Услуги", href: "#" },
-      { name: "О нас", href: "#" },
-      { name: "Платформаи", href: "#" },
+      { name: "Услуги", href: "#services" },
+      { name: "О нас", href: "#about" },
+      { name: "Платформаи", href: "#platform" },
       { name: "Блог", href: "#" },
       { name: "Связаться", href: "#" },
    ];
@@ -166,7 +166,7 @@ function Footer() {
                      color="orange"
                      label="Обсудим детали?"
                      type="link"
-                     href="#contact"
+                     href="/contact"
                   />
                </div>
                <div className="footer__link-contact-wrapper">

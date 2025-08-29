@@ -66,7 +66,7 @@ function Button({ label, color, type, href }: ButtonProps) {
                </svg>
             </div>
          ) : (
-            <Link to={href ? href : ""} className="botton__link">
+            <Link to={href ? href : "#"} className="botton__link">
                <span className="button__text" data-testid="button-text">
                   {label}
                </span>

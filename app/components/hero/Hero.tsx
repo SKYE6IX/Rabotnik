@@ -102,14 +102,14 @@ function Hero({ image, showMetrics, subTitle, children }: HeroProps) {
                         label="Оставить заявку"
                         color="purple"
                         type="link"
-                        href="#contact"
+                        href="/contact"
                      />
                   </div>
                   <div className="hero__button_small">
                      <Button
                         label="Связаться"
                         color="purple"
-                        href="#contact"
+                        href="/contact"
                         type="link"
                      />
                   </div>

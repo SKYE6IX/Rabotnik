@@ -82,7 +82,7 @@ function Navigation() {
                   color="orange"
                   label="Связаться"
                   type="link"
-                  href="#contact"
+                  href="/contact"
                />
             </div>
             <button className="header__menu-bar" onClick={toggleMenu}>

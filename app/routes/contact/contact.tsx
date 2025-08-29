@@ -1,8 +1,7 @@
 import ContactUs from "~/components/contact-us/ContactUs";
 import Faq from "~/components/faq/Faq";
 import TextSlider from "~/components/text-slider/TextSlider";
-import { faqList } from "./faqList.";
-import "./contact.css";
+import { faqList } from "./faqList";
 
 export default function Contact() {
    return (

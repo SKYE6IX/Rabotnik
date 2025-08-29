@@ -135,13 +135,13 @@ function AboutUs() {
                   label="Услуги"
                   color="purple"
                   type="link"
-                  href="/service"
+                  href="#services"
                />
                <Button
                   label="Оставить заявку"
                   color="black"
                   type="link"
-                  href="#contact"
+                  href="/contact"
                />
             </div>
          </div>

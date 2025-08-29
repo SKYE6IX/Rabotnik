@@ -138,7 +138,7 @@ function HowWeWork({
                            <Button
                               label="Оставить заявку"
                               color="black"
-                              href="#contact"
+                              href="/contact"
                               type="link"
                            />
                         </div>

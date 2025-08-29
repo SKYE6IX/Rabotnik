@@ -153,7 +153,7 @@ function OurPlatform() {
                      color="orange"
                      label="Оставить заявку"
                      type="link"
-                     href="#contact"
+                     href="/contact"
                   />
                </div>
                <ul className="our-platform__feature-list">
