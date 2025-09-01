@@ -18,6 +18,10 @@
       margin-top: 40px;
    }
 }
+.our-platform__inner-wrapper {
+   width: 100%;
+   max-width: 1600px;
+}
 .our-platform__title {
    font-family: "Roboto", sans-serif;
    font-size: 1.125rem;

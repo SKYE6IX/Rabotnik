@@ -54,22 +54,26 @@ const telegramChannels = [
 function TelegramChannels() {
    return (
       <section className="telegram-channels">
-         <h3 className="telegram-channels__title">Telegram каналы Rabotnik</h3>
-         <div className="telegram-channels__body">
-            <ul className="telegram-channels__list">
-               {telegramChannels.map((item) => (
-                  <li key={item.name} className="telegram-channels__item">
-                     <Link
-                        to={item.link}
-                        target="_blank"
-                        className="telegram-channels__item-link"
-                        data-testid="telegram-channel-link"
-                     >
-                        {item.name}
-                     </Link>
-                  </li>
-               ))}
-            </ul>
+         <div className="telegram-channels__inner-wrapper">
+            <h3 className="telegram-channels__title">
+               Telegram каналы Rabotnik
+            </h3>
+            <div className="telegram-channels__body">
+               <ul className="telegram-channels__list">
+                  {telegramChannels.map((item) => (
+                     <li key={item.name} className="telegram-channels__item">
+                        <Link
+                           to={item.link}
+                           target="_blank"
+                           className="telegram-channels__item-link"
+                           data-testid="telegram-channel-link"
+                        >
+                           {item.name}
+                        </Link>
+                     </li>
+                  ))}
+               </ul>
+            </div>
          </div>
       </section>
    );

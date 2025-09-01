@@ -18,6 +18,10 @@
       padding: 0px 20px 20px 20px;
    }
 }
+.how-we-work__inner-wrapper {
+   width: 100%;
+   max-width: 1600px;
+}
 .how-we-work__title {
    margin-bottom: 30px;
    font-family: "Roboto", sans-serif;

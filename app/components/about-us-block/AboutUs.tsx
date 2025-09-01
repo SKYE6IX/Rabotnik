@@ -93,56 +93,58 @@ function AboutUs() {
    return (
       <section className="about-us-block" ref={containerRef}>
          <div className="about-us-block__body">
-            <h3 className="about-us-block__title">
-               <span>
-                  <svg
-                     width="10"
-                     height="10"
-                     viewBox="0 0 10 10"
-                     fill="none"
-                     xmlns="http://www.w3.org/2000/svg"
-                  >
-                     <path
-                        fillRule="evenodd"
-                        clipRule="evenodd"
-                        d="M0 2C0 0.89543 0.89543 0 2 0C3.10457 0 4 0.89543 4 2C4 3.10457 3.10457 4 2 4C0.89543 4 0 3.10457 0 2Z"
-                        fill="#252527"
-                     />
-                  </svg>
-               </span>
-               О нас
-            </h3>
-            <h4
-               className="about-us-block__heading-text"
-               data-testid="about-us-heading-text"
-            >
-               Мы — digital-агентство, работающее на стыке{" "}
-               <span className="highlight">HR </span>и
-               <span className="highlight"> маркетинга</span>
-            </h4>
-            <div className="about-us-block__sub-heading-wrapper">
-               <h5
-                  className="about-us-block__sub-heading-text"
-                  data-testid="about-us-sub-heading-text"
+            <div className="about-us-block__body-inner">
+               <h3 className="about-us-block__title">
+                  <span>
+                     <svg
+                        width="10"
+                        height="10"
+                        viewBox="0 0 10 10"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                     >
+                        <path
+                           fillRule="evenodd"
+                           clipRule="evenodd"
+                           d="M0 2C0 0.89543 0.89543 0 2 0C3.10457 0 4 0.89543 4 2C4 3.10457 3.10457 4 2 4C0.89543 4 0 3.10457 0 2Z"
+                           fill="#252527"
+                        />
+                     </svg>
+                  </span>
+                  О нас
+               </h3>
+               <h4
+                  className="about-us-block__heading-text"
+                  data-testid="about-us-heading-text"
                >
-                  <span className="space"></span>С 2009 года мы закрываем
-                  вакансии комплексно, используя современные digital-инструменты
-                  и IT-технологии.
-               </h5>
-            </div>
-            <div className="about-us-block__buttons-wrapper">
-               <Button
-                  label="Услуги"
-                  color="purple"
-                  type="link"
-                  href="#services"
-               />
-               <Button
-                  label="Оставить заявку"
-                  color="black"
-                  type="link"
-                  href="/contact"
-               />
+                  Мы — digital-агентство, работающее на стыке{" "}
+                  <span className="highlight">HR </span>и
+                  <span className="highlight"> маркетинга</span>
+               </h4>
+               <div className="about-us-block__sub-heading-wrapper">
+                  <h5
+                     className="about-us-block__sub-heading-text"
+                     data-testid="about-us-sub-heading-text"
+                  >
+                     <span className="space"></span>С 2009 года мы закрываем
+                     вакансии комплексно, используя современные
+                     digital-инструменты и IT-технологии.
+                  </h5>
+               </div>
+               <div className="about-us-block__buttons-wrapper">
+                  <Button
+                     label="Услуги"
+                     color="purple"
+                     type="link"
+                     href="#services"
+                  />
+                  <Button
+                     label="Оставить заявку"
+                     color="black"
+                     type="link"
+                     href="/contact"
+                  />
+               </div>
             </div>
          </div>
          <div className="about-us-block__slide-wrapper">

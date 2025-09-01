@@ -15,6 +15,10 @@
       padding-right: 20px;
    }
 }
+.telegram-channels__inner-wrapper {
+   width: 100%;
+   max-width: 1600px;
+}
 .telegram-channels__title {
    font-family: "Roboto", sans-serif;
    font-size: 3.75rem;

@@ -16,6 +16,10 @@
       margin-top: 40px;
    }
 }
+.work-format__inner-wrapper {
+   width: 100%;
+   max-width: 1600px;
+}
 .work-format__header-wrapper {
    display: flex;
    justify-content: space-between;
