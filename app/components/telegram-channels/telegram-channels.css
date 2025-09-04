@@ -18,6 +18,7 @@
 .telegram-channels__inner-wrapper {
    width: 100%;
    max-width: 1600px;
+   margin: 0 auto;
 }
 .telegram-channels__title {
    font-family: "Roboto", sans-serif;

@@ -12,6 +12,7 @@
 .service-list-block__inner-wrapper {
    width: 100%;
    max-width: 1600px;
+   margin: 0 auto;
 }
 .service-list-block__title {
    font-family: "Roboto", sans-serif;

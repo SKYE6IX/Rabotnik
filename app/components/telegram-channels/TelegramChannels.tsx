@@ -53,7 +53,7 @@ const telegramChannels = [
 
 function TelegramChannels() {
    return (
-      <section className="telegram-channels">
+      <section className="telegram-channels" id="telegram-channels">
          <div className="telegram-channels__inner-wrapper">
             <h3 className="telegram-channels__title">
                Telegram каналы Rabotnik

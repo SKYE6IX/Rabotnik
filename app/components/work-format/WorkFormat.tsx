@@ -36,7 +36,7 @@ function WorkFormat() {
       { scope: containerRef }
    );
    return (
-      <section className="work-format" ref={containerRef}>
+      <section className="work-format" id="work-format" ref={containerRef}>
          <div className="work-format__inner-wrapper">
             <div className="work-format__header-wrapper">
                <h3 className="work-format__title">
@@ -69,75 +69,66 @@ function WorkFormat() {
             <div className="work-format__body">
                <div className="work-format__list">
                   <div className="work-format__item">
-                     <h5 className="work-format__item-heading">Формат</h5>
-                     <ul className="work-format__item-inner-list">
-                        <li
-                           className="work-format__item-inner-list-item"
-                           data-testid="work-format-list-item"
-                        >
-                           Базовый обзвон
-                        </li>
-                        <li
-                           className="work-format__item-inner-list-item"
-                           data-testid="work-format-list-item"
-                        >
-                           Расширенный ресечинг
-                        </li>
-                        <li
-                           className="work-format__item-inner-list-item"
-                           data-testid="work-format-list-item"
-                        >
-                           Квалификация + запись
-                        </li>
-                     </ul>
+                     <h5 className="work-format__item-heading">&nbsp;</h5>
+                     <h5 className="work-format__item-heading">
+                        Базовый обзвон
+                     </h5>
+                     <h5 className="work-format__item-heading">
+                        Расширенный ресечинг и запись
+                     </h5>
                   </div>
 
                   <div className="work-format__item">
-                     <h5 className="work-format__item-heading">Что входит</h5>
-                     <ul className="work-format__item-inner-list">
-                        <li
-                           className="work-format__item-inner-list-item"
-                           data-testid="work-format-list-item"
-                        >
-                           Фиксация отклика + передача в CRM
-                        </li>
-                        <li
-                           className="work-format__item-inner-list-item"
-                           data-testid="work-format-list-item"
-                        >
-                           Проверка, фильтрация, комментарии
-                        </li>
-                        <li
-                           className="work-format__item-inner-list-item"
-                           data-testid="work-format-list-item"
-                        >
-                           Назначение интервью, расписание
-                        </li>
-                     </ul>
+                     <p className="work-format__item-inner-list-item">
+                        Фиксация отклика
+                     </p>
+                     <p className="work-format__item-inner-list-item">+</p>
+                     <p className="work-format__item-inner-list-item">+</p>
                   </div>
 
                   <div className="work-format__item">
-                     <h5 className="work-format__item-heading">Подходит для</h5>
-                     <ul className="work-format__item-inner-list">
-                        <li
-                           className="work-format__item-inner-list-item"
-                           data-testid="work-format-list-item"
-                        >
-                           Горячие лиды, массовые вакансии
-                        </li>
-                        <li
-                           className="work-format__item-inner-list-item"
-                           data-testid="work-format-list-item"
-                        >
-                           Вахта, дефицитные позиции
-                        </li>
-                        <li
-                           className="work-format__item-inner-list-item"
-                           data-testid="work-format-list-item"
-                        >
-                           Внутренние HR-команды, найм в регионах
-                        </li>
-                     </ul>
+                     <p className="work-format__item-inner-list-item">
+                        Фильтрация по нужным параметрам
+                     </p>
+                     <p className="work-format__item-inner-list-item">+</p>
+                     <p className="work-format__item-inner-list-item">+</p>
+                  </div>
+
+                  <div className="work-format__item">
+                     <p className="work-format__item-inner-list-item">
+                        Презентация вакансии
+                     </p>
+                     <p className="work-format__item-inner-list-item">-</p>
+                     <p className="work-format__item-inner-list-item">+</p>
+                  </div>
+
+                  <div className="work-format__item">
+                     <p className="work-format__item-inner-list-item">
+                        Назначение интервью
+                     </p>
+                     <p className="work-format__item-inner-list-item">-</p>
+                     <p className="work-format__item-inner-list-item">+</p>
+                  </div>
+
+                  <div className="work-format__item">
+                     <p className="work-format__item-inner-list-item">
+                        Передача в CRM
+                     </p>
+                     <p className="work-format__item-inner-list-item">+</p>
+                     <p className="work-format__item-inner-list-item">+</p>
+                  </div>
+
+                  <div className="work-format__item">
+                     <p className="work-format__item-inner-list-item">
+                        Подходит для
+                     </p>
+                     <p className="work-format__item-inner-list-item">
+                        Горячие лиды, массовые вакансии, вахта
+                     </p>
+                     <p className="work-format__item-inner-list-item">
+                        Массовые вакансии, найм в регионах, внутренние
+                        HR-команды
+                     </p>
                   </div>
                </div>
             </div>

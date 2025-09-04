@@ -149,7 +149,7 @@ function Hero({ image, showMetrics, subTitle, children }: HeroProps) {
             >
                <div className="hero__metrics-item">
                   <h3 className="hero__metrics-text" data-testid="hero-metric">
-                     <span className="highlight">15 лет рынке</span>
+                     <span className="highlight">15 лет на рынке</span>
                      <br /> кадровой рекламы
                   </h3>
                </div>

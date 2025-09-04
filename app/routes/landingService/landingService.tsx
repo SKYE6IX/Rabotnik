@@ -53,7 +53,7 @@ function landingService() {
             headingIntro="Что вы получаете?"
             heading={
                <>
-                  Инструмент который работает на
+                  Инструмент, который работает на
                   <span className="highlight"> результат</span>
                </>
             }

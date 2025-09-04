@@ -46,6 +46,8 @@ function leadProcessingService() {
             }
          />
          <ServiceOverview
+            boxOneTitle="Форматы работы"
+            hrefBox1="#work-format"
             boxTwoTitle="Что такое ресечинг?"
             boxTwoText="Это оперативная первичная валидация кандидатов"
             boxThreeList={[

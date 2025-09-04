@@ -7,7 +7,7 @@ interface WorkStageProps {
 
 function WorkStage({ list }: WorkStageProps) {
    return (
-      <section className="work-stage">
+      <section className="work-stage" id="work-stage">
          <div className="work-stage__inner-wrapper">
             <h3 className="work-stage__title">
                <span>

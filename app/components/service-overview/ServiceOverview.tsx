@@ -134,7 +134,7 @@ function ServiceOverview({
                      {boxFourTitle || "Этапы работы"}
                   </h3>
                   <Link
-                     to={hrefBox4 || "/contact"}
+                     to={hrefBox4 || "#work-stage"}
                      className="service-overview__list-item-link"
                   >
                      <svg

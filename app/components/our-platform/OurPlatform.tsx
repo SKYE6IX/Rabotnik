@@ -208,7 +208,7 @@ function OurPlatform() {
                         <span>
                            Поддерживает интеграции с{" "}
                            <span className="bold">HR-системами</span> и
-                           <span className="bold">Личными кабинетами</span>
+                           <span className="bold"> Личными кабинетами</span>
                         </span>
                      </li>
                      <li

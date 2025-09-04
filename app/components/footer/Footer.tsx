@@ -8,9 +8,9 @@ function Footer() {
    const navLinks = [
       { name: "Услуги", href: "/#services" },
       { name: "О нас", href: "/#about" },
-      { name: "Платформаи", href: "/#platform" },
+      { name: "Платформа", href: "/#platform" },
       { name: "Блог", href: "#" },
-      { name: "Связаться", href: "#" },
+      { name: "Связаться", href: "/contact" },
    ];
 
    return (

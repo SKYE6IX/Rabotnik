@@ -50,7 +50,7 @@ function adManagementService() {
             headingIntro="Что вы получаете?"
             heading={
                <>
-                  Инструмент который работает на{" "}
+                  Инструмент, который работает на{" "}
                   <span className="highlight"> результат</span>
                </>
             }
@@ -91,6 +91,8 @@ function adManagementService() {
             }}
          />
          <ServiceOverview
+            boxOneTitle="Результаты наших клиентов"
+            hrefBox1="#performance-metrics"
             boxTwoTitle="Реклама в социальных сетях"
             boxTwoList={[
                "Ведение кампаний в VK, Telegram",

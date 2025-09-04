@@ -17,6 +17,7 @@
 .contact-us__inner-wrapper {
    width: 100%;
    max-width: 1600px;
+   margin: 0 auto;
 }
 .contact-us__title {
    margin-bottom: 30px;

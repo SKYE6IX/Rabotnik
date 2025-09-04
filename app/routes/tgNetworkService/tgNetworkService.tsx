@@ -44,7 +44,7 @@ function tgNetworkService() {
                <>
                   Быстрый найм за 15 минут:{" "}
                   <span className="highlight">живая аудитория,</span> прямой
-                  отклик и доступ и доступ к кандидатам{" "}
+                  отклик и доступ к кандидатам{" "}
                   <span className="highlight"> по всей России</span>
                </>
             }
@@ -53,7 +53,7 @@ function tgNetworkService() {
             headingIntro="Что вы получаете?"
             heading={
                <>
-                  Инструмент который работает на{" "}
+                  Инструмент, который работает на{" "}
                   <span className="highlight">результат</span>
                </>
             }
@@ -94,6 +94,7 @@ function tgNetworkService() {
          />
          <ServiceOverview
             boxOneTitle="Наши Telegram каналы"
+            hrefBox1="#telegram-channels"
             boxTwoTitle="Как всё происходит?"
             boxTwoList={[
                "Создадим продающий текст",
@@ -102,6 +103,7 @@ function tgNetworkService() {
             ]}
             boxThreeText="Используйте возможности Telegram для эффективного подбора персонала с помощью Rabotnik!"
             boxFourTitle="Наши результаты"
+            hrefBox4="#performance-metrics"
          />
          <HowWeWork
             sectionTitle="Кому мы помогаем ?"

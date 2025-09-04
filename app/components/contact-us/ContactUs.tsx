@@ -22,7 +22,7 @@ function ContactUs() {
    return (
       <section className="contact-us">
          <div className="contact-us__inner-wrapper">
-            <h3 className="contact-us__title">
+            {/* <h3 className="contact-us__title">
                <span>
                   <svg
                      width="10"
@@ -40,7 +40,7 @@ function ContactUs() {
                   </svg>
                </span>
                Связаться
-            </h3>
+            </h3> */}
             <div className="contact-us__body">
                <div className="contact-us__image-wrapper">
                   <img

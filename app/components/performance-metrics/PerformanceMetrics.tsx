@@ -57,7 +57,11 @@ function PerformanceMetrics({
       { scope: containerRef }
    );
    return (
-      <section className="performance-metrics" ref={containerRef}>
+      <section
+         className="performance-metrics"
+         id="performance-metrics"
+         ref={containerRef}
+      >
          <div className="performance-metrics__inner-wrapper">
             <h3 className="performance-metrics__title">{sectionTitle}</h3>
             <div className="performance-metrics__body">
