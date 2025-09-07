@@ -7,6 +7,7 @@ import ChannelOverview from "~/components/channel-overview/ChannelOverview";
 import WorkStage from "~/components/work-stage/WorkStage";
 import HowWeWork from "~/components/how-we-work/HowWeWork";
 import ContactUs from "~/components/contact-us/ContactUs";
+import LandingListBlock from "~/components/landing-list-block/LandingListBlock";
 import Faq from "~/components/faq/Faq";
 import heroImage from "./hero-image.jpg";
 import howWeWorkImage from "./how-we-work.jpg";
@@ -59,6 +60,7 @@ function landingService() {
             }
          />
          <ServiceOverview
+            hrefBox1="#landings-list"
             boxTwoTitle="Что мы делаем?"
             boxTwoList={[
                "Лендинг под одну вакансию",
@@ -78,6 +80,7 @@ function landingService() {
                "Интеграции: Telegram, Bitrix24, Excel, чат-боты",
             ]}
          />
+         <LandingListBlock />
          <WorkStage
             list={[
                "Анализ вакансии, аудит ЦА",

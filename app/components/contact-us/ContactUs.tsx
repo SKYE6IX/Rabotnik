@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Button from "../button/Button";
+import { Link } from "react-router";
 import image from "/contact-us-image.jpg";
 import "./contact-us.css";
 
@@ -106,7 +107,14 @@ function ContactUs() {
                         />
                         <p className="contact-us__form-term">
                            Нажимая кнопку "Отправить", я даю согласие на
-                           обработку моих персональных данных
+                           <Link
+                              target="_blank"
+                              className="contact-us__form-term__link"
+                              to="/consent-page"
+                           >
+                              {" "}
+                              обработку моих персональных данных
+                           </Link>
                         </p>
                      </div>
                   </form>

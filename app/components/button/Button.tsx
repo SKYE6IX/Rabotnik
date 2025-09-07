@@ -4,12 +4,13 @@ import "./button.css";
 
 interface ButtonProps {
    label: string;
+   target?: string;
    color: "orange" | "purple" | "black";
    type: "link" | "submit";
    href?: string;
    onClick?: () => void;
 }
-function Button({ label, color, type, href, onClick }: ButtonProps) {
+function Button({ label, target, color, type, href, onClick }: ButtonProps) {
    return (
       <button
          className={["botton", color].join(" ")}
@@ -71,6 +72,7 @@ function Button({ label, color, type, href, onClick }: ButtonProps) {
                to={href ? href : "#"}
                className="botton__link"
                onClick={onClick}
+               target={target}
             >
                <span className="button__text" data-testid="button-text">
                   {label}

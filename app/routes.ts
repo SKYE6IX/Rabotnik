@@ -14,4 +14,6 @@ export default [
    ),
    route("tg-network", "./routes/tgNetworkService/tgNetworkService.tsx"),
    route("contact", "./routes/contact/contact.tsx"),
+   route("privacy-policy", "./routes/privacyPolicy/privacyPolicy.tsx"),
+   route("consent-page", "./routes/consentPage/consentPage.tsx"),
 ] satisfies RouteConfig;

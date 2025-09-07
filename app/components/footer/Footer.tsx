@@ -264,9 +264,9 @@ function Footer() {
                         data-testid="footer-logo-image"
                      />
                   </div>
-                  <p className="footer__bottom-text">
+                  <Link to="/privacy-policy" className="footer__bottom-text">
                      Политика конфиденциальности
-                  </p>
+                  </Link>
                </div>
             </div>
          </div>

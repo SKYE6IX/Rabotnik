@@ -131,3 +131,7 @@
    font-weight: 300;
    color: #000;
 }
+
+.contact-us__form-term__link {
+   text-decoration: underline;
+}
