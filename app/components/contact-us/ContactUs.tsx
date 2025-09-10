@@ -9,6 +9,7 @@ function ContactUs() {
       name: "",
       telephone: "",
       company: "",
+      mail: "",
    };
    const [formState, setFormState] = useState(initialState);
 
@@ -20,28 +21,52 @@ function ContactUs() {
       }));
    };
 
+   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+      e.preventDefault();
+
+      try {
+         const response = await fetch(
+            "https://crm.betapress.ru/rest/3638/y6c9ssgwqm4iiow6/crm.lead.add.json",
+            {
+               method: "POST",
+               headers: {
+                  "Content-Type": "application/json",
+               },
+               body: JSON.stringify({
+                  fields: {
+                     TITLE: `Лид с сайта (${formState.name})`,
+                     NAME: formState.name,
+                     PHONE: [
+                        { VALUE: formState.telephone, VALUE_TYPE: "WORK" },
+                     ],
+                     EMAIL: [{ VALUE: formState.mail, VALUE_TYPE: "WORK" }],
+                     COMPANY_TITLE: formState.company,
+                  },
+                  params: { REGISTER_SONET_EVENT: "Y" },
+               }),
+            }
+         );
+
+         const result = await response.json();
+         console.log("Lead created:", result);
+
+         if (result.result) {
+            console.log("Спасибо! Ваша заявка отправлена.");
+            alert("Спасибо! Ваша заявка отправлена.");
+            setFormState(initialState);
+         } else {
+            console.log("Ошибка при отправке, попробуйте снова.");
+            alert("Ошибка при отправке, попробуйте снова.");
+         }
+      } catch (err) {
+         console.error("Ошибка отправки:", err);
+         alert("Не удалось отправить заявку.");
+      }
+   };
+
    return (
       <section className="contact-us">
          <div className="contact-us__inner-wrapper">
-            {/* <h3 className="contact-us__title">
-               <span>
-                  <svg
-                     width="10"
-                     height="10"
-                     viewBox="0 0 10 10"
-                     fill="none"
-                     xmlns="http://www.w3.org/2000/svg"
-                  >
-                     <path
-                        fillRule="evenodd"
-                        clipRule="evenodd"
-                        d="M0 2C0 0.89543 0.89543 0 2 0C3.10457 0 4 0.89543 4 2C4 3.10457 3.10457 4 2 4C0.89543 4 0 3.10457 0 2Z"
-                        fill="#252527"
-                     />
-                  </svg>
-               </span>
-               Связаться
-            </h3> */}
             <div className="contact-us__body">
                <div className="contact-us__image-wrapper">
                   <img
@@ -62,7 +87,7 @@ function ContactUs() {
                   >
                      Оставьте заявку
                   </h5>
-                  <form action="" className="contact-us__form">
+                  <form className="contact-us__form" onSubmit={handleSubmit}>
                      <label htmlFor="name">
                         <input
                            type="text"
@@ -84,6 +109,18 @@ function ContactUs() {
                            onChange={handleChange}
                            className="contact-us__form-input"
                            placeholder="Телефон"
+                           data-testid="contact-us-form-input"
+                        />
+                     </label>
+                     <label htmlFor="mail">
+                        <input
+                           type="mail"
+                           id="mail"
+                           name="mail"
+                           value={formState.mail}
+                           onChange={handleChange}
+                           className="contact-us__form-input"
+                           placeholder="Почта"
                            data-testid="contact-us-form-input"
                         />
                      </label>

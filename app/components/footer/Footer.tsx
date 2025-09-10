@@ -9,7 +9,6 @@ function Footer() {
       { name: "Услуги", href: "/#services" },
       { name: "О нас", href: "/#about" },
       { name: "Платформа", href: "/#platform" },
-      { name: "Блог", href: "#" },
       { name: "Связаться", href: "/contact" },
    ];
 
