@@ -20,32 +20,28 @@ function ContactUs() {
          [name]: value,
       }));
    };
+   console.log(import.meta.env.VITE_TEST_API);
 
    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
 
       try {
-         const response = await fetch(
-            "https://crm.betapress.ru/rest/3638/y6c9ssgwqm4iiow6/crm.lead.add.json",
-            {
-               method: "POST",
-               headers: {
-                  "Content-Type": "application/json",
+         const response = await fetch(import.meta.env.VITE_TEST_API, {
+            method: "POST",
+            headers: {
+               "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+               fields: {
+                  TITLE: `Лид с сайта (${formState.name})`,
+                  NAME: formState.name,
+                  PHONE: [{ VALUE: formState.telephone, VALUE_TYPE: "WORK" }],
+                  EMAIL: [{ VALUE: formState.mail, VALUE_TYPE: "WORK" }],
+                  COMPANY_TITLE: formState.company,
                },
-               body: JSON.stringify({
-                  fields: {
-                     TITLE: `Лид с сайта (${formState.name})`,
-                     NAME: formState.name,
-                     PHONE: [
-                        { VALUE: formState.telephone, VALUE_TYPE: "WORK" },
-                     ],
-                     EMAIL: [{ VALUE: formState.mail, VALUE_TYPE: "WORK" }],
-                     COMPANY_TITLE: formState.company,
-                  },
-                  params: { REGISTER_SONET_EVENT: "Y" },
-               }),
-            }
-         );
+               params: { REGISTER_SONET_EVENT: "Y" },
+            }),
+         });
 
          const result = await response.json();
          console.log("Lead created:", result);
@@ -145,7 +141,6 @@ function ContactUs() {
                         <p className="contact-us__form-term">
                            Нажимая кнопку "Отправить", я даю согласие на
                            <Link
-                              target="_blank"
                               className="contact-us__form-term__link"
                               to="/consent-page"
                            >
