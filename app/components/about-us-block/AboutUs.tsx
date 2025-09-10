@@ -40,16 +40,19 @@ function AboutUs() {
    useGSAP(
       () => {
          let tween: GSAPTween | null = null;
+
          const runAnimation = () => {
             if (tween !== null) {
                tween.kill();
                tween = null;
             }
+
             const widths: number[] = [];
             const gap = 90;
-            const slides = gsap.utils.toArray(
+
+            const slides = gsap.utils.toArray<HTMLDivElement>(
                ".about-us-block__slide-container"
-            ) as HTMLDivElement[];
+            );
             let offset = 0;
             slides.forEach((el) => {
                widths.push(el.offsetWidth);
@@ -75,8 +78,21 @@ function AboutUs() {
                repeat: -1,
             });
          };
-         runAnimation();
-
+         // Wait for all the image to load before running
+         const images = slides.map((slide) => {
+            const img = new Image();
+            img.src = slide;
+            return img;
+         });
+         Promise.all(
+            images.map((image) =>
+               image.complete
+                  ? Promise.resolve()
+                  : new Promise((res) =>
+                       image.addEventListener("load", res, { once: true })
+                    )
+            )
+         ).then(() => runAnimation());
          let lastWidth = 0;
          const handleResize = () => {
             if (window.innerWidth !== lastWidth) {
@@ -89,7 +105,6 @@ function AboutUs() {
       },
       { scope: containerRef }
    );
-
    return (
       <section className="about-us-block" ref={containerRef}>
          <div className="about-us-block__body">
