@@ -8,10 +8,9 @@ import logo from "/rabotnik-logo.webp";
 import "./navigation.css";
 
 const navigationsList = [
-   { name: "Услуги", href: "#services" },
-   { name: "Наша платформа", href: "#platform" },
-   { name: "О нас", href: "#about-us" },
-   { name: "Блог", href: "#" },
+   { name: "Услуги", href: "/#services" },
+   { name: "Наша платформа", href: "/#platform" },
+   { name: "О нас", href: "/#about-us" },
 ];
 
 function Navigation() {
@@ -82,7 +81,7 @@ function Navigation() {
                   color="orange"
                   label="Связаться"
                   type="link"
-                  href="#contact"
+                  href="/contact"
                />
             </div>
             <button className="header__menu-bar" onClick={toggleMenu}>

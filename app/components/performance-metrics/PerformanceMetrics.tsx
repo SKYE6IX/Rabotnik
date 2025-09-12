@@ -57,38 +57,44 @@ function PerformanceMetrics({
       { scope: containerRef }
    );
    return (
-      <section className="performance-metrics" ref={containerRef}>
-         <h3 className="performance-metrics__title">{sectionTitle}</h3>
-         <div className="performance-metrics__body">
-            <div className="performance-metrics__list">
-               {metrics.map((metric, idx) => (
-                  <div
-                     key={metric.label + idx}
-                     className="performance-metrics__item"
-                  >
-                     <h5
-                        className="performance-metrics__item-heading"
-                        data-testid="performance-metrics-item-heading"
+      <section
+         className="performance-metrics"
+         id="performance-metrics"
+         ref={containerRef}
+      >
+         <div className="performance-metrics__inner-wrapper">
+            <h3 className="performance-metrics__title">{sectionTitle}</h3>
+            <div className="performance-metrics__body">
+               <div className="performance-metrics__list">
+                  {metrics.map((metric, idx) => (
+                     <div
+                        key={metric.label + idx}
+                        className="performance-metrics__item"
                      >
-                        {metric.label}
-                     </h5>
-                     <span
-                        className="performance-metrics__item-value"
-                        data-count-end={metric.value.countEnd}
-                        data-count-by={metric.value.countBy}
-                        data-suffix={metric.value.suffix}
-                        data-testid="performance-metrics-item-value"
-                     >
-                        {metric.value.initial}
-                     </span>
-                     <p
-                        className="performance-metrics__item-description"
-                        data-testid="performance-metrics-item-description"
-                     >
-                        {metric.description}
-                     </p>
-                  </div>
-               ))}
+                        <h5
+                           className="performance-metrics__item-heading"
+                           data-testid="performance-metrics-item-heading"
+                        >
+                           {metric.label}
+                        </h5>
+                        <span
+                           className="performance-metrics__item-value"
+                           data-count-end={metric.value.countEnd}
+                           data-count-by={metric.value.countBy}
+                           data-suffix={metric.value.suffix}
+                           data-testid="performance-metrics-item-value"
+                        >
+                           {metric.value.initial}
+                        </span>
+                        <p
+                           className="performance-metrics__item-description"
+                           data-testid="performance-metrics-item-description"
+                        >
+                           {metric.description}
+                        </p>
+                     </div>
+                  ))}
+               </div>
             </div>
          </div>
       </section>

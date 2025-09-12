@@ -7,10 +7,16 @@ import ChannelOverview from "~/components/channel-overview/ChannelOverview";
 import WorkStage from "~/components/work-stage/WorkStage";
 import HowWeWork from "~/components/how-we-work/HowWeWork";
 import ContactUs from "~/components/contact-us/ContactUs";
+import LandingListBlock from "~/components/landing-list-block/LandingListBlock";
 import Faq from "~/components/faq/Faq";
 import heroImage from "./hero-image.jpg";
 import howWeWorkImage from "./how-we-work.jpg";
 import { faqList } from "./faqList.";
+import type { Route } from "./+types/landingService";
+
+export const links: Route.LinksFunction = () => [
+   { rel: "preload", href: heroImage, as: "image" },
+];
 
 function landingService() {
    return (
@@ -48,12 +54,13 @@ function landingService() {
             headingIntro="Что вы получаете?"
             heading={
                <>
-                  Инструмент который работает на
+                  Инструмент, который работает на
                   <span className="highlight"> результат</span>
                </>
             }
          />
          <ServiceOverview
+            hrefBox1="#landings-list"
             boxTwoTitle="Что мы делаем?"
             boxTwoList={[
                "Лендинг под одну вакансию",
@@ -73,6 +80,7 @@ function landingService() {
                "Интеграции: Telegram, Bitrix24, Excel, чат-боты",
             ]}
          />
+         <LandingListBlock />
          <WorkStage
             list={[
                "Анализ вакансии, аудит ЦА",

@@ -6,11 +6,10 @@ import "./footer.css";
 
 function Footer() {
    const navLinks = [
-      { name: "Услуги", href: "#" },
-      { name: "О нас", href: "#" },
-      { name: "Платформаи", href: "#" },
-      { name: "Блог", href: "#" },
-      { name: "Связаться", href: "#" },
+      { name: "Услуги", href: "/#services" },
+      { name: "О нас", href: "/#about" },
+      { name: "Платформа", href: "/#platform" },
+      { name: "Связаться", href: "/contact" },
    ];
 
    return (
@@ -166,7 +165,7 @@ function Footer() {
                      color="orange"
                      label="Обсудим детали?"
                      type="link"
-                     href="#contact"
+                     href="/contact"
                   />
                </div>
                <div className="footer__link-contact-wrapper">
@@ -264,9 +263,9 @@ function Footer() {
                         data-testid="footer-logo-image"
                      />
                   </div>
-                  <p className="footer__bottom-text">
+                  <Link to="/privacy-policy" className="footer__bottom-text">
                      Политика конфиденциальности
-                  </p>
+                  </Link>
                </div>
             </div>
          </div>

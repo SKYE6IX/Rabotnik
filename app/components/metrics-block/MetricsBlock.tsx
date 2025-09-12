@@ -94,11 +94,11 @@ function MetricsBlock() {
                   <div>
                      <h3
                         className="metrics-block__item-number"
-                        data-count-end="400"
+                        data-count-end="100"
                         data-count-by="10"
                         data-testid="metric-number"
                      >
-                        100
+                        10
                      </h3>
                      <span
                         className="metrics-block__item-label"

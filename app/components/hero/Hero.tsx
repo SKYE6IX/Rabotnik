@@ -102,14 +102,14 @@ function Hero({ image, showMetrics, subTitle, children }: HeroProps) {
                         label="Оставить заявку"
                         color="purple"
                         type="link"
-                        href="#contact"
+                        href="/contact"
                      />
                   </div>
                   <div className="hero__button_small">
                      <Button
                         label="Связаться"
                         color="purple"
-                        href="#contact"
+                        href="/contact"
                         type="link"
                      />
                   </div>
@@ -149,7 +149,7 @@ function Hero({ image, showMetrics, subTitle, children }: HeroProps) {
             >
                <div className="hero__metrics-item">
                   <h3 className="hero__metrics-text" data-testid="hero-metric">
-                     <span className="highlight">15 лет рынке</span>
+                     <span className="highlight">15 лет на рынке</span>
                      <br /> кадровой рекламы
                   </h3>
                </div>

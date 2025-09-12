@@ -81,13 +81,17 @@ function CreativeSlider() {
                repeat: -1,
             });
          };
-
          runAnimation();
-         const handleResize = () => {
-            runAnimation();
-         };
-         window.addEventListener("resize", handleResize);
 
+         let lastWidth = 0;
+         const handleResize = () => {
+            if (window.innerWidth !== lastWidth) {
+               lastWidth = window.innerWidth;
+               runAnimation();
+            }
+         };
+
+         window.addEventListener("resize", handleResize);
          return () => window.removeEventListener("resize", handleResize);
       },
       { scope: containerRef }
@@ -109,7 +113,12 @@ function CreativeSlider() {
             </div>
          </div>
          <div className="creative-slider__button-wrapper">
-            <Button color="purple" label="Заказать" href="#" type="link" />
+            <Button
+               color="purple"
+               label="Заказать"
+               href="/contact"
+               type="link"
+            />
          </div>
       </section>
    );

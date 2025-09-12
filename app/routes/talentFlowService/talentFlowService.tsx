@@ -10,6 +10,11 @@ import ContactUs from "~/components/contact-us/ContactUs";
 import heroImage from "./hero-image.png";
 import howWeWorkImage from "./how-we-work.png";
 import "./talent-flow-service.css";
+import type { Route } from "./+types/talentFlowService";
+
+export const links: Route.LinksFunction = () => [
+   { rel: "preload", href: heroImage, as: "image" },
+];
 
 const recruitmentFunnelList = [
    "Релевантные лиды по согласованным критериям",
@@ -59,8 +64,8 @@ export default function talentFlowService() {
             }
             subTitle={
                <>
-                  Вам нужны не просмотры, а люди. Мы знаем, где найти даже тех,
-                  кто не ищет работу.
+                  Мы знаем, как привлечь даже тех, кто сейчас не в поисках или
+                  работает у ваших конкурентов
                </>
             }
          />
@@ -76,6 +81,7 @@ export default function talentFlowService() {
             }
          />
          <ServiceOverview
+            hrefBox1="#performance-metrics"
             boxTwoTitle="Что такое генерация кадрового трафика?"
             boxTwoText="Это не просто реклама вакансии. Это система привлечения кандидатов по заданным критериям через digital-каналы, автоматизацию и обработку откликов"
             boxThreeText="Мы настраиваем поток валидных лидов с максимальным охватом и персонализацией под специфику вашего бизнеса"

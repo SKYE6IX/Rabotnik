@@ -12,6 +12,11 @@
       padding: 50px 20px 50px 20px;
    }
 }
+.work-stage__inner-wrapper {
+   width: 100%;
+   max-width: 1600px;
+   margin: 0 auto;
+}
 .work-stage__title {
    margin-bottom: 30px;
    font-family: "Roboto", sans-serif;

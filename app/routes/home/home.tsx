@@ -11,6 +11,11 @@ import heroImage from "./hero-image.jpg";
 import howWeWorkImage from "./how-we-work.jpg";
 import { faqList } from "./faqList.";
 import "./home.css";
+import type { Route } from "./+types/home";
+
+export const links: Route.LinksFunction = () => [
+   { rel: "preload", href: heroImage, as: "image" },
+];
 
 export default function Home() {
    return (
@@ -29,10 +34,10 @@ export default function Home() {
          <HowWeWork
             sectionImage={howWeWorkImage}
             sectionTitle="Как мы работаем ?"
-            sectionHeading="Чтобы наполнить вашу HR-воронку:"
+            sectionHeading="Как мы работаем, чтобы наполнить вашу HR-воронку:"
             sectionSubHeading="Все лиды попадают в ваш Личный кабинет или интегрируются в HRM-систему"
             sectionList={[
-               "Используем 5+ каналов одновременно (таргет, контекст, рассылки: WA sms, e-mail, голосовы и чат-боты, online и offline реклама)",
+               "Используем 5+ каналов одновременно (таргет, контекст, рассылки: whatsapp, sms, e-mail, голосовые и чат-боты)",
                "Настраиваем персонализированные кампании под вакансию",
                "Охватываем даже тех, кто не ищет работу активно",
             ]}

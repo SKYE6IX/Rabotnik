@@ -12,6 +12,11 @@ import { faqList } from "./faqList.";
 import heroImage from "./hero-image.jpg";
 import howWeWorkImage from "./how-we-work.jpg";
 import howWeWork2Image from "./how-we-work2.jpg";
+import type { Route } from "./+types/adManagementService";
+
+export const links: Route.LinksFunction = () => [
+   { rel: "preload", href: heroImage, as: "image" },
+];
 
 function adManagementService() {
    return (
@@ -45,7 +50,7 @@ function adManagementService() {
             headingIntro="Что вы получаете?"
             heading={
                <>
-                  Инструмент который работает на{" "}
+                  Инструмент, который работает на{" "}
                   <span className="highlight"> результат</span>
                </>
             }
@@ -86,6 +91,8 @@ function adManagementService() {
             }}
          />
          <ServiceOverview
+            boxOneTitle="Результаты наших клиентов"
+            hrefBox1="#performance-metrics"
             boxTwoTitle="Реклама в социальных сетях"
             boxTwoList={[
                "Ведение кампаний в VK, Telegram",

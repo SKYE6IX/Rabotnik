@@ -12,6 +12,11 @@ import heroImage from "./hero-image.jpg";
 import howWeWorkImage from "./how-we-work.jpg";
 import { faqList } from "./faqList.";
 import "./creative-ads.css";
+import type { Route } from "./+types/creativeAdsService";
+
+export const links: Route.LinksFunction = () => [
+   { rel: "preload", href: heroImage, as: "image" },
+];
 
 function creativeAdsService() {
    return (
@@ -51,7 +56,7 @@ function creativeAdsService() {
             headingIntro="Что вы получаете?"
             heading={
                <>
-                  Инструмент который работает на{" "}
+                  Инструмент, который работает на{" "}
                   <span className="highlight"> результат</span>
                </>
             }
@@ -72,7 +77,7 @@ function creativeAdsService() {
                " Адаптации под форматы: сторис, лендинг, баннеры, офлайн",
                "Тексты под рекламу: кратко, по делу, с УТП",
                "Сценарии и монтаж видео-объявлений",
-               "Офлайн-носители: листовки, постеры, транспорт, ТВ",
+               "Офлайн-носители: листовки, постеры, транспорт, ТВ, наружная реклама",
             ]}
          />
          <WorkStage

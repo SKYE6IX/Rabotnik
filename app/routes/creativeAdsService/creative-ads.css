@@ -25,7 +25,8 @@
 
    /* Non overide component styles */
    .creative-ads-service__benefit-text-wrapper {
-      margin-top: 100px;
+      max-width: 1600px;
+      margin: 100px auto 0;
       padding-left: 120px;
       padding-right: 120px;
       padding-bottom: 50px;
