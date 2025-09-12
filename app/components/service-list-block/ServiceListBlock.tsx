@@ -105,74 +105,72 @@ function ServiceListBlock() {
                </h4>
                <div className="service-list-block__list">
                   {servicesList.map((service) => (
-                     <Link to={service.href}>
-                        <div
-                           className="service-list-block__list-item"
-                           key={service.label}
-                           onMouseEnter={handleMouseEnter}
-                           onMouseLeave={handleMouseLeave}
-                        >
-                           <div className="service-list-block__list-item-inner">
-                              <div className="service-list-block__list-item-image-wrapper">
+                     <div
+                        className="service-list-block__list-item"
+                        key={service.label}
+                        onMouseEnter={handleMouseEnter}
+                        onMouseLeave={handleMouseLeave}
+                     >
+                        <div className="service-list-block__list-item-inner">
+                           <div className="service-list-block__list-item-image-wrapper">
+                              <img
+                                 src={service.image}
+                                 alt={service.label}
+                                 data-testid="service-list-block-image"
+                              />
+                           </div>
+                           <div className="service-list-block__list-item-icon">
+                              {service.icon && (
                                  <img
-                                    src={service.image}
-                                    alt={service.label}
-                                    data-testid="service-list-block-image"
+                                    src={service.icon}
+                                    alt="An icon place on the service image"
+                                 />
+                              )}
+                           </div>
+                           <div className="service-list-block__list-item-shape-container">
+                              <div className="service-list-block__list-item-shape-inner">
+                                 <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="30"
+                                    height="30"
+                                    viewBox="0 0 30 30"
+                                    fill="none"
+                                    className="service-list-block__list-item-shape left"
+                                 >
+                                    <path
+                                       d="M0 30C2.55414 30 5.7052 29.8662 8.99534 29.2308C18.8709 27.3234 29.9994 20.8963 30 0L30 30L0 30Z"
+                                       fill="white"
+                                    />
+                                 </svg>
+                                 <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="30"
+                                    height="30"
+                                    viewBox="0 0 30 30"
+                                    fill="none"
+                                    className="service-list-block__list-item-shape right"
+                                 >
+                                    <path
+                                       d="M0 30C2.55414 30 5.7052 29.8662 8.99534 29.2308C18.8709 27.3234 29.9994 20.8963 30 0L30 30L0 30Z"
+                                       fill="white"
+                                    />
+                                 </svg>
+                                 <Button
+                                    color="purple"
+                                    label="Подробнее"
+                                    type="link"
+                                    href={service.href}
                                  />
                               </div>
-                              <div className="service-list-block__list-item-icon">
-                                 {service.icon && (
-                                    <img
-                                       src={service.icon}
-                                       alt="An icon place on the service image"
-                                    />
-                                 )}
-                              </div>
-                              <div className="service-list-block__list-item-shape-container">
-                                 <div className="service-list-block__list-item-shape-inner">
-                                    <svg
-                                       xmlns="http://www.w3.org/2000/svg"
-                                       width="30"
-                                       height="30"
-                                       viewBox="0 0 30 30"
-                                       fill="none"
-                                       className="service-list-block__list-item-shape left"
-                                    >
-                                       <path
-                                          d="M0 30C2.55414 30 5.7052 29.8662 8.99534 29.2308C18.8709 27.3234 29.9994 20.8963 30 0L30 30L0 30Z"
-                                          fill="white"
-                                       />
-                                    </svg>
-                                    <svg
-                                       xmlns="http://www.w3.org/2000/svg"
-                                       width="30"
-                                       height="30"
-                                       viewBox="0 0 30 30"
-                                       fill="none"
-                                       className="service-list-block__list-item-shape right"
-                                    >
-                                       <path
-                                          d="M0 30C2.55414 30 5.7052 29.8662 8.99534 29.2308C18.8709 27.3234 29.9994 20.8963 30 0L30 30L0 30Z"
-                                          fill="white"
-                                       />
-                                    </svg>
-                                    <Button
-                                       color="purple"
-                                       label="Подробнее"
-                                       type="link"
-                                       href={service.href}
-                                    />
-                                 </div>
-                              </div>
                            </div>
-                           <h5
-                              className="service-list-block__list-item-label"
-                              data-testid="service-list-block-label"
-                           >
-                              {service.label}
-                           </h5>
                         </div>
-                     </Link>
+                        <h5
+                           className="service-list-block__list-item-label"
+                           data-testid="service-list-block-label"
+                        >
+                           {service.label}
+                        </h5>
+                     </div>
                   ))}
                </div>
             </div>
