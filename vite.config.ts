@@ -5,7 +5,6 @@ import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
    plugins: [!process.env.VITEST && reactRouter(), tsconfigPaths()],
-   base: "/Rabotnik/",
    test: {
       globals: true,
       environment: "jsdom",
